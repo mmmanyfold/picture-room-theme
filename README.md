@@ -11,9 +11,12 @@
 - Their picks are organized within rows and columns, which are also marked:
 	```
 	<!-- ## ROW 1 -->
+	
 		<!-- ## ROW 1, COLUMN 1 -->
 		<!-- ## ROW 1, COLUMN 2 -->
+		
 	<!-- ## ROW 2 -->
+	
 		<!-- ## ROW 2, COLUMN 1 -->
 		<!-- ## ROW 2, COLUMN 2 -->
 	```
