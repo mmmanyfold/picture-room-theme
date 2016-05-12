@@ -139,22 +139,18 @@ function bindZoom() {
         self.renderEvents(response.data);
       });
 
-      $(".pr-events").siblings().prepend("
-      <script type='text/html' id='event-template'>
-        <div class='pr-event'>
-          <h2 class='text-center'><a href='{{ link }}''><strong>{{ name }}</strong><br/>{{ start }}{{#end}} – {{ end }}{{/end}}</a></h2>
-          <div class='row'>
-            <div class='col-sm-6 description'>        {{{ description }}}      </div>
-            <div class='col-xs-6 col-sm-3 address'>
-              {{#place}}        <strong>{{name}}</strong><br/>
-              {{#location}}        {{street}}<br/>
-              {{city}}, {{state}}<br/>
-              {{zip}}        {{/location}}        {{/place}}      
-            </div>
-            <div class='col-xs-6 col-sm-3 join-link'><a class='btn btn-primary' href='{{ link }}'>Join Event</a></div>
-          </div>
-        </div>
-      </script>")
+      $(".pr-events").siblings().prepend(
+        "<script type='text/html' id='event-template'>" +
+          "<div class='pr-event'>" +
+            "<h2 class='text-center'><a href='{{ link }}''><strong>{{ name }}</strong><br/>{{ start }}{{#end}} – {{ end }}{{/end}}</a></h2>" +
+            "<div class='row'>" +
+            "<div class='col-sm-6 description'>{{{ description }}}</div>" +
+            "<div class='col-xs-6 col-sm-3 address'>" +
+              "{{#place}}        <strong>{{name}}</strong><br/>" +
+              "{{#location}}        {{street}}<br/>" +
+              "{{city}}, {{state}}<br/>" +
+              "{{zip}}        {{/location}}        {{/place}} </div>" +
+            "<div class='col-xs-6 col-sm-3 join-link'><a class='btn btn-primary' href='{{ link }}'>Join Event</a></div></div></div></script>")
     },
 
     renderEvents: function(events) {
