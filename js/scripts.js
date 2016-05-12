@@ -134,13 +134,30 @@ function bindZoom() {
   prEvents.prototype = {
     init: function() {
       var self = this;
+
       $.getJSON(this.$el.attr("data-url"), function(response) {
         self.renderEvents(response.data);
       });
+
+      $(".pr-events").siblings().prepend("
+      <script type='text/html' id='event-template'>
+        <div class='pr-event'>
+          <h2 class='text-center'><a href='{{ link }}''><strong>{{ name }}</strong><br/>{{ start }}{{#end}} – {{ end }}{{/end}}</a></h2>
+          <div class='row'>
+            <div class='col-sm-6 description'>        {{{ description }}}      </div>
+            <div class='col-xs-6 col-sm-3 address'>
+              {{#place}}        <strong>{{name}}</strong><br/>
+              {{#location}}        {{street}}<br/>
+              {{city}}, {{state}}<br/>
+              {{zip}}        {{/location}}        {{/place}}      
+            </div>
+            <div class='col-xs-6 col-sm-3 join-link'><a class='btn btn-primary' href='{{ link }}'>Join Event</a></div>
+          </div>
+        </div>
+      </script>")
     },
 
     renderEvents: function(events) {
-
       // resort
       var r_events = events.sort(function(a, b){
         var sorter = 0;
@@ -160,7 +177,7 @@ function bindZoom() {
             name: event.name,
             description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
             link: "https://www.facebook.com/events/" + event.id + "/",
-            start: dateFormat(start, "dddd mmmm dS, h:MM TT"),
+            start: dateFormat(new Date(b.start_time), "dddd mmmm dS, h:MM TT"),
             place: event.place
           };
           if (event.end_time) data['end'] = dateFormat(new Date(event.end_time), "h:MM TT");
@@ -188,8 +205,10 @@ function bindZoom() {
   $.fn.prEvents.defaults = {};
   $(".pr-events").prEvents();
 
+
+
   $(".carousel").carousel({
-    interval: false
+    interval: 5000
   });
 
   $(".home-carousel").on("slid.bs.carousel", function(e) {

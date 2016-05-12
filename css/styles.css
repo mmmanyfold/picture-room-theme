@@ -433,8 +433,21 @@ select.form-control {
   background: url(../images/PR-Star-Empty.png);
   background-size: contain;
   line-height: 12px; }
-  .link-mcnally-jackson:hover {
+  
+.link-mcnally-jackson:hover {
     background-image: url(../images/PR-Star-Full.png); }
+
+.link-gfts {
+  display:inline-block;
+  text-indent:-9999px;
+  width:12px;
+  height:12px;
+  background:url(../images/PR-Circle-Empty.png);
+  background-size:contain;
+  line-height:12px; }
+
+.link-gfts:hover {
+  background-image:url(../images/PR-Circle-Full.png); }
 
 /* Side Nav */
 .side-nav {
