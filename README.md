@@ -2,42 +2,42 @@
 
 - The code lives in this repository as [staff_picks.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/staff_picks.html)
 
-- I've added comments to the code; anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only). They don't affect the webpage.
+- Anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only). They don't affect the webpage.
 
 - Each person’s section is marked with a comment (look for their name): 
-	
-  		<!-- ## EDIT SANDEEP'S PICKS BELOW -->
-
+	```	
+	<!-- ## EDIT SANDEEP'S PICKS BELOW -->
+	```
 - Their picks are organized within rows and columns, which are also marked:
-
-      <!-- ## ROW 1 -->
-      			<!-- ## ROW 1, COLUMN 1 -->
-      <!-- ## ROW 1, COLUMN 2 -->
-      <!-- ## ROW 2 -->
-      			<!-- ## ROW 2, COLUMN 1 -->
-      <!-- ## ROW 2, COLUMN 2 -->
-	
+	```
+	<!-- ## ROW 1 -->
+		<!-- ## ROW 1, COLUMN 1 -->
+		<!-- ## ROW 1, COLUMN 2 -->
+	<!-- ## ROW 2 -->
+		<!-- ## ROW 2, COLUMN 1 -->
+		<!-- ## ROW 2, COLUMN 2 -->
+	```
 - Each item contains the following:
-
-      <!-- ## EDIT PRODUCT URL -->
-      
-      <!-- ## EDIT PRODUCT IMAGE URL -->
-      
-      <!-- ## EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
-
+	```
+	<!-- ## EDIT PRODUCT URL -->
+	      
+	<!-- ## EDIT PRODUCT IMAGE URL -->
+	      
+	<!-- ## EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+	```
 - Click the pencil icon to start editing. Edit the code as needed here on Github, so we always have a backup of the most recent version.
 
-- When you're done editing, scroll to the bottom of the page and enter a descriptive commit message (ie. *Update Milah's picks*). Then click "Commit changes"
+- When you're done editing, scroll to the bottom of the page and enter a descriptive commit message (ie. *update Milah's picks*). Then commit changes.
 
 - Copy-paste the complete updated code into Lightspeed:
 
-      Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
-      
-      Go to **Custom Pages > Staff Picks**
-      
-      Click the **< >** icon under **Edit Page Content** to switch to HTML view
-      
-      Replace everything with updated code and click **Save**.
+	1. Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
+	
+	2. Go to **Custom Pages > Staff Picks**
+	
+	3. Click the **< >** icon under **Edit Page Content** to switch to HTML view
+	
+	4. Replace everything with updated code and click **Save**.
 
 - Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit again if necessary – make sure to include a commit message (ie. *Fix typo*)
 
