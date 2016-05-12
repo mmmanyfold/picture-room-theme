@@ -1,4 +1,49 @@
-README for Brooklyn2014 theme
+##Updating Staff Picks
+
+- The code lives in this repository as [staff_picks.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/staff_picks.html)
+
+- I've added comments to the code; anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only). They don't affect the webpage.
+
+- Each person’s section is marked with a comment (look for their name): 
+	
+  		<!-- ## EDIT SANDEEP'S PICKS BELOW -->
+
+- Their picks are organized within rows and columns, which are also marked:
+
+      <!-- ## ROW 1 -->
+      			<!-- ## ROW 1, COLUMN 1 -->
+      <!-- ## ROW 1, COLUMN 2 -->
+      <!-- ## ROW 2 -->
+      			<!-- ## ROW 2, COLUMN 1 -->
+      <!-- ## ROW 2, COLUMN 2 -->
+	
+- Each item contains the following:
+
+      <!-- ## EDIT PRODUCT URL -->
+      
+      <!-- ## EDIT PRODUCT IMAGE URL -->
+      
+      <!-- ## EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+
+- Click the pencil icon to start editing. Edit the code as needed here on Github, so we always have a backup of the most recent version.
+
+- When you're done editing, scroll to the bottom of the page and enter a descriptive commit message (ie. *Update Milah's picks*). Then click "Commit changes"
+
+- Copy-paste the complete updated code into Lightspeed:
+
+      Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
+      
+      Go to **Custom Pages > Staff Picks**
+      
+      Click the **< >** icon under **Edit Page Content** to switch to HTML view
+      
+      Replace everything with updated code and click **Save**.
+
+- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit again if necessary – make sure to include a commit message (ie. *Fix typo*)
+
+===========================================================================
+
+##README for Brooklyn2014 theme
 
 Thank you for taking the time to read this file.
 Below are some very important notes on how to make changes to the look of your web store.
