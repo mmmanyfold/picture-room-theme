@@ -42,7 +42,7 @@
 	
 	4. Replace everything with updated code and click **Save**.
 
-- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit again if necessary – make sure to include a commit message (ie. *Fix typo*)
+- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit again if necessary – make sure to include a commit message (ie. *fix typo*)
 
 ===========================================================================
 
