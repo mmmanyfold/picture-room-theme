@@ -356,7 +356,7 @@ h1 {
   padding: 12px; }
 
 .form-control {
-  color: black;}
+  color: black; }
 
 .btn {
   font-size: 20px;
@@ -433,21 +433,19 @@ select.form-control {
   background: url(../images/PR-Star-Empty.png);
   background-size: contain;
   line-height: 12px; }
-  
-.link-mcnally-jackson:hover {
+  .link-mcnally-jackson:hover {
     background-image: url(../images/PR-Star-Full.png); }
 
 .link-gfts {
-  display:inline-block;
-  text-indent:-9999px;
-  width:12px;
-  height:12px;
-  background:url(../images/PR-Circle-Empty.png);
-  background-size:contain;
-  line-height:12px; }
-
-.link-gfts:hover {
-  background-image:url(../images/PR-Circle-Full.png); }
+  display: inline-block;
+  text-indent: -9999px;
+  width: 12px;
+  height: 12px;
+  background: url(../images/PR-Circle-Empty.png);
+  background-size: contain;
+  line-height: 12px; }
+  .link-gfts:hover {
+    background-image: url(../images/PR-Circle-Full.png); }
 
 /* Side Nav */
 .side-nav {
@@ -615,7 +613,7 @@ select.form-control {
   color: #012f87; }
 .featured-artists .forest h2 {
   color: #43683c; }
-.featured-artists .salmon h2 { 
+.featured-artists .salmon h2 {
   color: #ff737b; }
 .featured-artists .baby-blue h2 {
   color: #c4d3e6; }

@@ -46,6 +46,14 @@
 
 ===========================================================================
 
+## Developement
+
+`npm install`
+
+`grunt`
+
+===========================================================================
+
 ##README for Brooklyn2014 theme
 
 Thank you for taking the time to read this file.
