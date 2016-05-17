@@ -1,6 +1,6 @@
 ##Updating Staff Picks
 
-- The code lives in this repository as [staff_picks.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/staff_picks.html)
+- Open [staff_picks.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/staff_picks.html)
 
 - Anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only). They don't affect the webpage.
 
@@ -46,7 +46,7 @@
 
 ===========================================================================
 
-## Developement
+## Development
 
 `npm install`
 
