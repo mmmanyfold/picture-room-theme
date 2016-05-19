@@ -173,7 +173,7 @@ function bindZoom() {
             name: event.name,
             description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
             link: "https://www.facebook.com/events/" + event.id + "/",
-            start: dateFormat(new Date(b.start_time), "dddd mmmm dS, h:MM TT"),
+            start: dateFormat(new Date(event.start_time), "dddd mmmm dS, h:MM TT"),
             place: event.place
           };
           if (event.end_time) data['end'] = dateFormat(new Date(event.end_time), "h:MM TT");
