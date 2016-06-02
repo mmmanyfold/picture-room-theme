@@ -39,11 +39,20 @@
 				echo '<div class="row product-row">';
 
 			//Our product cell is a nested div, containing the graphic and text label with clickable javascript
+
+      foreach($objProduct->ProductPhotos as $photo){
+        echo CHtml::tag('div',array(
+          'class'=>'photos',
+          'data-image'=>$photo['image_large']));
+        echo '</div>';
+      }
+
       echo CHtml::tag('div',array(
           'class'=>'product_cell col-sm-'.(12/$this->gridProductsPerRow)),
 
               CHtml::tag('div',array(
               'class'=>'product_cell_graphic',
+
               'onclick'=>'window.location.href=\''.$objProduct->Link.'\''),
               CHtml::link(CHtml::image($objProduct->Image,$objProduct->Title), $objProduct->Link)).
 
