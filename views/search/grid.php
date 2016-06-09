@@ -32,40 +32,24 @@
 
 		<?php
 		$ct=-1;
+    $count = 0;
 		foreach($model as $objProduct):
-
 
 			if ($objProduct->rowBookendFront)
 				echo '<div class="row product-row">';
 
 			//Our product cell is a nested div, containing the graphic and text label with clickable javascript
 
-      // Carousel spike
-
-      // echo Carousel::widget ([ 
-      //     'items' => [
-      //         '<img src="http://pictureroom.mcnallyjacksonstore.com/store/images/product/s/screen-studies-2015-framed-unframed.png"/>',
-      //         '<img src="http://pictureroom.mcnallyjacksonstore.com/store/images/product/k/kill-slay%E2%80%A6-1975-signed-framed-unframed.png"/>'
-      //     ],
-      //     'options' => [ 
-      //         'style' => 'width:70%',
-      //         'interval' => '1000'
-      //     ]
-      // ]);
-
-      $count = 0;
-
       foreach($objProduct->ProductPhotos as $photo){
         echo CHtml::tag('div', array(
           'class'=>'photoSet',
-          'data-image-id'=>$count,
           'data-image'=>$photo['image_large']));
         echo '</div>';
-        ++$count;
       }
 
       echo CHtml::tag('div',array(
-          'class'=>'product_cell col-sm-'.(12/$this->gridProductsPerRow)),
+          'class'=>'product_cell col-sm-'.(12/$this->gridProductsPerRow),
+          'data-product_cell_id'=>$count),
 
               CHtml::tag('div',array(
               'class'=>'product_cell_graphic',
@@ -104,6 +88,8 @@
 
 			if ($objProduct->rowBookendBack)
 				echo '</div>';
+
+      ++$count;
 
 		endforeach; ?>
 
