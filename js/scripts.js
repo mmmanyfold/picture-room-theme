@@ -1,21 +1,43 @@
-$(document).ready(
-  function(){
+$(document).ready(function() {
+
+    "use strict";
+
     $(".link-gfts").mouseover(function(){$("span#site-name").text("Goods for the Study")});
     $(".link-gfts").mouseout(function(){$("span#site-name").text("Picture Room")});
     $(".link-mcnally-jackson").mouseover(function(){$("span#site-name").text("McNally Jackson")});
     $(".link-mcnally-jackson").mouseout(function(){$("span#site-name").text("Picture Room")});
-  }
-  if($('.product-grid').length === 1) { // if we are in grid.php view
-    $('.product_cell').map(function(i, pc) {
-      return $(pc).data('product_cell_id');
-    }).map(function(i, carousel_id){
-      console.log(carousel_id);
-      var photoVariation = $('.photoVariation')
-    });
 
-    //.first().data('product_cell_id')
-  }
-);
+    // if we are in grid.php view
+    if($('.product-grid').length === 1) {
+
+        var grid = {};
+        var productVariations = $('.photoVariation');
+
+        // enumerate the list of variation product cell ids
+        // can't simply map over it because jquery modifies the return value of .map
+        // presumably for chaining
+        var enum_grid = Array.apply(this, productVariations.map(function(i, product){
+            return $(product).data('image-variation-pc-id');
+        }));
+
+        // initialize grid map
+        // [...new Set(enum_grid)] // ala ES6
+        R.uniq(enum_grid)
+            .forEach(function (v) {
+              grid[v] = [];
+            });
+
+        // populate grid map
+        productVariations.each(function(i, product){
+            var pc_id = $(product).data('image-variation-pc-id');
+            grid[pc_id].push($(product).data('image'))
+        });
+
+        // now we can use grid map to render individual images onto
+        // the mustache templates..
+
+    }
+  });
 
 function bindZoom() {
   $(".pr-photos").prPhotos();

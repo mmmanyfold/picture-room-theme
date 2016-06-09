@@ -8,7 +8,7 @@
 
 	<link rel="canonical" href="<?= $this->CanonicalUrl; ?>"/>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
