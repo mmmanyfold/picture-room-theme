@@ -35,6 +35,11 @@ $(document).ready(function() {
 
         // now we can use grid map to render individual images onto
         // the mustache templates..
+        var mustache_templates = $('.product-grid-carousel-template');
+        //mustache_templates.each(function (template) {
+          // render grid data onto mustache
+          //$(Mustache.render($(template).html(), data));
+        //});
 
     }
   });

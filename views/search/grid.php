@@ -67,7 +67,7 @@
                       'onclick'=>'window.location.href=\''.$objProduct->Link.'\''
                   ),
                   CHtml::tag('div', array(),
-                      '<script type="text/html" class="product-cell-carousel-template" data-photoSet-id="'.$count.'">
+                      '<script type="text/html" class="product-grid-carousel-template" data-photoSet-id="'.$count.'">
                         <div class="primary-image">
                           <a href="#" class="zoom">+ ZOOM</a>
                           <img src="{{ primary_image.image }}" alt="{{ primary_image.alt }}" />
