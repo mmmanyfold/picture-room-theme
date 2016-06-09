@@ -40,11 +40,16 @@
 
 			//Our product cell is a nested div, containing the graphic and text label with clickable javascript
 
+      $varCount = 0;
+
       foreach($objProduct->ProductPhotos as $photo){
         echo CHtml::tag('div', array(
-          'class'=>'photoSet',
+          'data-image-variation-pc-id'=>$count,
+          'data-image-variation-id'=>$varCount,
+          'class'=>'photoVariation',
           'data-image'=>$photo['image_large']));
         echo '</div>';
+        ++$varCount;
       }
 
       echo CHtml::tag('div',array(
@@ -62,7 +67,7 @@
                       'onclick'=>'window.location.href=\''.$objProduct->Link.'\''
                   ),
                   CHtml::tag('div', array(),
-                      '<script type="text/html" id="grid-product-carousel-template">
+                      '<script type="text/html" data-photoSet-id="'.$count.'">
                         <div class="primary-image">
                           <a href="#" class="zoom">+ ZOOM</a>
                           <img src="{{ primary_image.image }}" alt="{{ primary_image.alt }}" />
@@ -81,9 +86,9 @@
                     {{/multiple_images}}
                   </script>')).
 
-              CHtml::link($objProduct->family->family.'<br>'.$objProduct->Title, $objProduct->Link).' — '.
-              CHtml::tag('span',array('class'=>'product_cell_price_slash'),$objProduct->SlashedPrice).
-              CHtml::tag('span',array('class'=>'product_cell_price'),$objProduct->Price)
+            CHtml::link($objProduct->family->family.'<br>'.$objProduct->Title, $objProduct->Link).' — '.
+            CHtml::tag('span',array('class'=>'product_cell_price_slash'),$objProduct->SlashedPrice).
+            CHtml::tag('span',array('class'=>'product_cell_price'),$objProduct->Price)
           );
 
 			if ($objProduct->rowBookendBack)

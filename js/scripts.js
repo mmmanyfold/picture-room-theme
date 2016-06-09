@@ -5,6 +5,16 @@ $(document).ready(
     $(".link-mcnally-jackson").mouseover(function(){$("span#site-name").text("McNally Jackson")});
     $(".link-mcnally-jackson").mouseout(function(){$("span#site-name").text("Picture Room")});
   }
+  if($('.product-grid').length === 1) { // if we are in grid.php view
+    $('.product_cell').map(function(i, pc) {
+      return $(pc).data('product_cell_id');
+    }).map(function(i, carousel_id){
+      console.log(carousel_id);
+      var photoVariation = $('.photoVariation')
+    });
+
+    //.first().data('product_cell_id')
+  }
 );
 
 function bindZoom() {
