@@ -40,11 +40,28 @@
 
 			//Our product cell is a nested div, containing the graphic and text label with clickable javascript
 
+      // Carousel spike
+
+      // echo Carousel::widget ([ 
+      //     'items' => [
+      //         '<img src="http://pictureroom.mcnallyjacksonstore.com/store/images/product/s/screen-studies-2015-framed-unframed.png"/>',
+      //         '<img src="http://pictureroom.mcnallyjacksonstore.com/store/images/product/k/kill-slay%E2%80%A6-1975-signed-framed-unframed.png"/>'
+      //     ],
+      //     'options' => [ 
+      //         'style' => 'width:70%',
+      //         'interval' => '1000'
+      //     ]
+      // ]);
+
+      $count = 0;
+
       foreach($objProduct->ProductPhotos as $photo){
-        echo CHtml::tag('div',array(
-          'class'=>'photos',
+        echo CHtml::tag('div', array(
+          'class'=>'photoSet',
+          'data-image-id'=>$count,
           'data-image'=>$photo['image_large']));
         echo '</div>';
+        ++$count;
       }
 
       echo CHtml::tag('div',array(
@@ -52,9 +69,9 @@
 
               CHtml::tag('div',array(
               'class'=>'product_cell_graphic',
-
               'onclick'=>'window.location.href=\''.$objProduct->Link.'\''),
-              CHtml::link(CHtml::image($objProduct->Image,$objProduct->Title), $objProduct->Link)).
+
+                  CHtml::link(CHtml::image($objProduct->Image,$objProduct->Title), $objProduct->Link)).
 
               CHtml::tag('div',array(
                   'class'=>'product_cell_label',
@@ -62,10 +79,10 @@
                   ),
                   CHtml::tag('div', array(),
                       '<script type="text/html" id="grid-product-carousel-template">
-                    <div class="primary-image">
-                      <a href="#" class="zoom">+ ZOOM</a>
-                      <img src="{{ primary_image.image }}" alt="{{ primary_image.alt }}" />
-                    </div>
+                        <div class="primary-image">
+                          <a href="#" class="zoom">+ ZOOM</a>
+                          <img src="{{ primary_image.image }}" alt="{{ primary_image.alt }}" />
+                        </div>
                     {{#multiple_images}}
                     <div class="row row-5-col gutter-top pr-photos-toolbar">
                       <div class="col-xs-1"><span class="current-index">1</span> / {{ total_images }}</div>
@@ -83,8 +100,8 @@
               CHtml::link($objProduct->family->family.'<br>'.$objProduct->Title, $objProduct->Link).' — '.
               CHtml::tag('span',array('class'=>'product_cell_price_slash'),$objProduct->SlashedPrice).
               CHtml::tag('span',array('class'=>'product_cell_price'),$objProduct->Price)
-
           );
+
 			if ($objProduct->rowBookendBack)
 				echo '</div>';
 
