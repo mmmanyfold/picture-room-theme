@@ -30,17 +30,35 @@ $(document).ready(function() {
         // populate grid map
         productVariations.each(function(i, product){
             var pc_id = $(product).data('image-variation-pc-id');
-            grid[pc_id].push($(product).data('image'))
+            grid[pc_id].push("<img src='"  + $(product).data('image') + "'/>")
         });
 
         // now we can use grid map to render individual images onto
-        // the mustache templates..
+        // the page
+
+        var template_start = '<div class="carousel" data-interval="100">' + 
+          '<div class="carousel-inner" role="listbox">';
+        var template_end =  '</div></div>';
+        var template_carousels = [];
+
         var mustache_templates = $('.product-grid-carousel-template');
         mustache_templates.each(function (index, template) {
-           //render grid data onto mustache
-           //Mustache.render($(template).html(), grid[index]);
+           //render grid data onto page
+          var middlebits = function(){
+            return grid[index].map(function(img, index){
+              if(index === 0) {
+                return '<div class="item active">' + img + '</div>';
+              } else {
+                return '<div class="item">' + img + '</div>';
+              }
+            });
+          };
+          template_carousels.push(template_start +  middlebits() + template_end);
+          // $(this).html(template_start +  middlebits() + template_end);
+          $(this).parent().append(template_start +  middlebits() + template_end);
         });
-
+        // start the carousels
+        $('.carousel').carousel();
     }
   });
 

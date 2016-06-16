@@ -66,25 +66,7 @@
                   'class'=>'product_cell_label',
                       'onclick'=>'window.location.href=\''.$objProduct->Link.'\''
                   ),
-                  CHtml::tag('div', array(),
-                      '<script type="text/html" class="product-grid-carousel-template" data-photoSet-id="'.$count.'">
-                        <div class="primary-image">
-                          <a href="#" class="zoom">+ ZOOM</a>
-                          <img src="{{ primary_image.image }}" alt="{{ primary_image.alt }}" />
-                        </div>
-                    {{#multiple_images}}
-                    <div class="row row-5-col gutter-top pr-photos-toolbar">
-                      <div class="col-xs-1"><span class="current-index">1</span> / {{ total_images }}</div>
-                      {{#images}}
-                      <div class="col-xs-1">
-                        <a href="#" data-image="{{ image }}" data-alt="{{ alt }}" data-index="{{ index }}" {{#active}}class="active"{{/active}}>
-                          <img src="{{ thumb }}" alt="{{ alt }}" />
-                        </a>
-                      </div>
-                      {{/images}}
-                    </div>
-                    {{/multiple_images}}
-                  </script>')).
+                  CHtml::tag('div', array('class'=>'product-grid-carousel-template'))).
 
             CHtml::link($objProduct->family->family.'<br>'.$objProduct->Title, $objProduct->Link).' — '.
             CHtml::tag('span',array('class'=>'product_cell_price_slash'),$objProduct->SlashedPrice).
