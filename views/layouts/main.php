@@ -48,6 +48,6 @@
 
 		<!-- backwards compatibility only, to be removed by version 3.2 -->
 		<?php echo $this->loginDialog; ?>
-   <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl."/js/scripts.min.js" ?>"></script>
+   <script type="text/javascript" src="<?=Yii::app()->theme->baseUrl."/dist/scripts.min.js" ?>"></script>
 	</body>
 </html>

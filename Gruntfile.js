@@ -22,24 +22,12 @@ module.exports = function(grunt) {
     uglify: {
       scripts: {
         files: {
-          "js/scripts.min.js": [
+          "dist/scripts.min.js": [
             "js/jquery.min.js", "js/bootstrap.js",
             "js/mustache.js", "js/date.format.js",
             "js/linkify.min.js", "js/linkify-jquery.min.js",
             "js/scripts.js"]
         }
-      }
-    },
-    copy: {
-      main: {
-        files: [
-          {src: 'css/styles.min.css',
-           dest: '/Volumes/Picture Room/pictureroom/store/themes/pictureroom/css/styles.min.css'},
-          {src: 'js/scripts.min.js',
-           dest: '/Volumes/Picture Room/pictureroom/store/themes/pictureroom/js/scripts.min.js'},
-          {src: 'css/checkout-styles.css',
-           dest: '/Volumes/Picture Room/pictureroom/store/themes/pictureroom/css/checkout-styles.css'}
-        ]
       }
     }
   });

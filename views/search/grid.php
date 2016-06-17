@@ -53,25 +53,22 @@
       }
 
       echo CHtml::tag('div',array(
-          'class'=>'product_cell col-sm-'.(12/$this->gridProductsPerRow),
-          'data-product_cell_id'=>$count),
+          'class'=>'product_cell col-sm-'.(12/$this->gridProductsPerRow)),
 
               CHtml::tag('div',array(
               'class'=>'product_cell_graphic',
               'onclick'=>'window.location.href=\''.$objProduct->Link.'\''),
-
-                  CHtml::link(CHtml::image($objProduct->Image,$objProduct->Title), $objProduct->Link)).
+                  CHtml::link(CHtml::tag('div', array(),
+									'<div class="product-grid-carousel" data-alt="'.$objProduct->Title.'"></div>'), $objProduct->Link)).
 
               CHtml::tag('div',array(
                   'class'=>'product_cell_label',
                       'onclick'=>'window.location.href=\''.$objProduct->Link.'\''
                   ),
-                  CHtml::tag('div', array('class'=>'product-grid-carousel-template'))).
-
-            CHtml::link($objProduct->family->family.'<br>'.$objProduct->Title, $objProduct->Link).' — '.
-            CHtml::tag('span',array('class'=>'product_cell_price_slash'),$objProduct->SlashedPrice).
-            CHtml::tag('span',array('class'=>'product_cell_price'),$objProduct->Price)
-          );
+			            CHtml::link($objProduct->family->family.'<br>'.$objProduct->Title, $objProduct->Link).' — '.
+			            CHtml::tag('span',array('class'=>'product_cell_price_slash'),$objProduct->SlashedPrice).
+			            CHtml::tag('span',array('class'=>'product_cell_price'),$objProduct->Price)
+          ));
 
 			if ($objProduct->rowBookendBack)
 				echo '</div>';

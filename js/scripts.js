@@ -9,7 +9,6 @@ $(document).ready(function() {
 
     // if we are in grid.php view
     if($('.product-grid').length === 1) {
-
         var grid = {};
         var productVariations = $('.photoVariation');
 
@@ -30,32 +29,31 @@ $(document).ready(function() {
         // populate grid map
         productVariations.each(function(i, product){
             var pc_id = $(product).data('image-variation-pc-id');
-            grid[pc_id].push("<img src='"  + $(product).data('image') + "'/>")
+            grid[pc_id].push('<img src="'  + $(product).data('image') + '"/>')
         });
 
         // now we can use grid map to render individual images onto
         // the page
 
-        var template_start = '<div class="carousel" data-interval="100">' + 
+        var template_start = '<div class="carousel" data-interval="100">' +
           '<div class="carousel-inner" role="listbox">';
         var template_end =  '</div></div>';
-        var template_carousels = [];
 
-        var mustache_templates = $('.product-grid-carousel-template');
-        mustache_templates.each(function (index, template) {
+        var middlebits = function(index){
+          return grid[index].map(function(img, i){
+            var item = "";
+            if(i === 0) {
+              item = '<div class="item active">' + img + '</div>';
+            } else {
+              item =  '<div class="item">' + img + '</div>';
+            }
+            return item;
+          });
+        };
+
+        $('.product-grid-carousel').map(function (index) {
            //render grid data onto page
-          var middlebits = function(){
-            return grid[index].map(function(img, index){
-              if(index === 0) {
-                return '<div class="item active">' + img + '</div>';
-              } else {
-                return '<div class="item">' + img + '</div>';
-              }
-            });
-          };
-          template_carousels.push(template_start +  middlebits() + template_end);
-          // $(this).html(template_start +  middlebits() + template_end);
-          $(this).parent().append(template_start +  middlebits() + template_end);
+          $(this).html(template_start +  middlebits(index).join('') + template_end);
         });
         // start the carousels
         $('.carousel').carousel();
