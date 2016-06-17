@@ -40,16 +40,12 @@
 
 			//Our product cell is a nested div, containing the graphic and text label with clickable javascript
 
-      $varCount = 0;
-
       foreach($objProduct->ProductPhotos as $photo){
         echo CHtml::tag('div', array(
           'data-image-variation-pc-id'=>$count,
-          'data-image-variation-id'=>$varCount,
           'class'=>'photoVariation',
           'data-image'=>$photo['image_large']));
         echo '</div>';
-        ++$varCount;
       }
 
       echo CHtml::tag('div',array(

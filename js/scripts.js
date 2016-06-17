@@ -20,7 +20,6 @@ $(document).ready(function() {
         }));
 
         // initialize grid map
-        // [...new Set(enum_grid)] // ala ES6
         R.uniq(enum_grid)
             .forEach(function (v) {
               grid[v] = [];
@@ -29,12 +28,12 @@ $(document).ready(function() {
         // populate grid map
         productVariations.each(function(i, product){
             var pc_id = $(product).data('image-variation-pc-id');
-            grid[pc_id].push('<img src="'  + $(product).data('image') + '"/>')
+            var alt = $('.product-grid-carousel').eq(i).data('alt');
+            grid[pc_id].push('<img alt="' + alt + '" src="'  + $(product).data('image') + '"/>');
         });
 
         // now we can use grid map to render individual images onto
         // the page
-
         var template_start = '<div class="carousel" data-interval="100">' +
           '<div class="carousel-inner" role="listbox">';
         var template_end =  '</div></div>';
