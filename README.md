@@ -1,3 +1,11 @@
+## Development
+
+`npm install`
+
+`grunt`
+
+===========================================================================
+
 ##Updating Staff Picks
 
 - Open [staff_picks.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/staff_picks.html)
@@ -43,14 +51,6 @@
 	4. Replace everything with updated code and click **Save**.
 
 - Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit again if necessary – make sure to include a commit message (ie. *fix typo*)
-
-===========================================================================
-
-## Development
-
-`npm install`
-
-`grunt`
 
 ===========================================================================
 
