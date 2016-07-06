@@ -34,7 +34,7 @@ $(document).ready(function() {
 
         // now we can use grid map to render individual images onto
         // the page
-        var template_start = '<div class="carousel" data-interval="100">' +
+        var template_start = '<div class="carousel">' +
           '<div class="carousel-inner" role="listbox">';
         var template_end =  '</div></div>';
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
           $(this).html(template_start +  middlebits(index).join('') + template_end);
         });
         // start the carousels
-        $('.carousel').carousel();
+        $('.carousel').carousel({ interval: 1000});
     }
   });
 
