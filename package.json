@@ -1,9 +1,9 @@
 {
-  "name": "picture-room",
-  "version": "0.1.0",
+  "name": "picture-room-theme",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
-    "url": "git://github.com/udbhav/picture-room.git"
+    "url": "git://github.com/mmmanyfold/picture-room-theme.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
