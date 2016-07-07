@@ -38,9 +38,7 @@
 	```
 - Click the pencil icon to start editing. Edit the code as needed here on Github, so we always have a backup of the most recent version.
 
-- When you're done editing, scroll to the bottom of the page and enter a descriptive commit message (ie. *update Milah's picks*). Then commit changes.
-
-- Copy-paste the complete updated code into Lightspeed:
+- When you're done making changes, copy-paste the complete updated code into Lightspeed:
 
 	1. Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
 
@@ -50,7 +48,11 @@
 
 	4. Replace everything with updated code and click **Save**.
 
-- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit again if necessary – make sure to include a commit message (ie. *fix typo*)
+- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit the code if necessary - always edit in Github and then copy paste into Lightspeed to test your changes.
+
+- Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *update Milah's picks*). Then commit changes.
+
+- If you need to change anything later on, always make sure to include a commit message (ie. *fix typo*)
 
 ===========================================================================
 
@@ -62,28 +64,29 @@
 
 - Click the pencil icon to start editing. Edit the code here on Github, so we always have a backup of the most recent version.
 
-- On line 2, replace the color name that appears at the end of `class` (hyphenate if more than one word) and the artist name (also hyphenate) in `data-brand`.<br>
-	On line 3, replace the artist name and dates.<br>
-	On line 9, replace the artist bio.<br>
-	On line 13, replace the feature description.<br>
-	On line 18, replace the name of the featured series in ALL CAPS.
+- Line 2 - Write down the 6-digit color hex code from the `style` property, we're going to need this later in the Previous Artists section). Then replace this hex code with the new one* and change the artist name (hyphenated) in `data-brand`.<br>
+	*&ast;To get the hex code, open the poster in Photoshop and use the [Eyedropper tool](https://css-tricks.com/grabbing-hex-codes-for-colors/) to select the color you want*<br>
+	Line 3 - Change the artist name and dates (no month abbrevs).<br>
+	Line 6 - In the image path, change the number and artist name.<br>
+	Line 9 - Replace artist bio.<br>
+	Line 13 - Replace series description.<br>
+	Line 18 - Replace series title.
 
-- To move the current artist into the Previous Artists section, paste the following template into line 26 and replace every instance of the artist first/last name:
+- To move the current artist into the Previous Artists section, paste the following template into line 26 and replace every instance of the artist first/last name. Replace hex code with the one from earlier!
 
 	```
 		<div class="col-sm-4">
-			<a href="/store/brand/leanne-shapton" class="salmon">
+			<a href="/store/brand/leanne-shapton" style="color:#c4d3e6">
 			<img src="/store/images/artists/PR-Posters-10-Leanne_Shapton.jpg" alt="Leanne Shapton">
 			2016.X
 			</a>
 		</div>
 	```
 
+	Make sure the number in the image path is correct, I always mess this up :p
 	Don't forget to change the year and Roman numeral as well.
 
-- When you're done making these changes, scroll to the bottom of the page and enter a descriptive commit message (ie. *add new featured artist: Maia Ruth Lee*). Then commit changes.
-
-- Copy-paste the complete updated code into Lightspeed:
+- When you're done making changes, copy-paste the complete updated code into Lightspeed:
 
 	1. Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
 
@@ -93,9 +96,11 @@
 
 	4. Replace everything with updated code and click **Save**.
 
-- Check the [Featured artist page](http://pictureroom.mcnallyjacksonstore.com/store/featured-artist) to make sure everything looks right. Edit again if necessary – make sure to include a commit message if you change anything (ie. *fix typo*)
+- Check the [Featured artist page](http://pictureroom.mcnallyjacksonstore.com/store/featured-artist) to make sure everything looks right. Edit the code if necessary - always edit in Github and then copy paste into Lightspeed to test your changes.
 
-**NOTE: Changing the actual colors is a bit more complicated and requires working from the terminal. For now, just let me know when you're done with these steps and I will update the colors. Next time I'm in town I'll show you how this works!**
+- Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *add new featured artist Maia Ruth Lee*). Then commit changes.
+
+- If you need to change anything later on, always make sure to include a commit message (ie. *fix typo*)
 
 ===========================================================================
 
