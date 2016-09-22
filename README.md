@@ -6,11 +6,55 @@
 
 ===========================================================================
 
+##Updating Slideshow
+
+- Image dimensions:
+	1200 x 800
+
+	Rename and upload (drag) to:
+	![ftp directory for homepage images](screenshots/ftp-homepage-images.png)
+
+- Open [homepage.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/homepage.html)
+
+- Anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only), they don't affect the webpage.
+
+- Their picks are organized within rows and columns, which are also marked:
+	```
+	<!-- ## ROW 1 -->
+
+		<!-- ## ROW 1, COLUMN 1 -->
+		<!-- ## ROW 1, COLUMN 2 -->
+
+	<!-- ## ROW 2 -->
+
+		<!-- ## ROW 2, COLUMN 1 -->
+		<!-- ## ROW 2, COLUMN 2 -->
+	```
+	- Click the pencil icon to start editing. Edit the code as needed here on Github, so we always have a backup of the most recent version.
+
+	- When you're done making changes, copy-paste the complete updated code into Lightspeed:
+
+		1. Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
+
+		2. Go to **Custom Pages > Staff Picks**
+
+		3. Click the **< >** icon under **Edit Page Content** to switch to HTML view
+
+		4. Replace everything with updated code and click **Save**.
+
+	- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit the code if necessary - always edit in Github and then copy paste into Lightspeed to test your changes.
+
+	- Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *update Milah's picks*). Then commit changes.
+
+	- If you need to change anything later on, always include a commit message (ie. *fix typo*)
+
+===========================================================================
+
 ##Updating Staff Picks
 
 - Open [staff_picks.html](https://github.com/mmmanyfold/picture-room-theme/blob/master/staff_picks.html)
 
-- Anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only). They don't affect the webpage.
+- Anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only), they don't affect the webpage.
 
 - Each person’s section is marked with a comment (look for their name):
 	```
@@ -52,7 +96,7 @@
 
 - Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *update Milah's picks*). Then commit changes.
 
-- If you need to change anything later on, always make sure to include a commit message (ie. *fix typo*)
+- If you need to change anything later on, always include a commit message (ie. *fix typo*)
 
 ===========================================================================
 
@@ -64,15 +108,16 @@
 
 - Click the pencil icon to start editing. Edit the code here on Github, so we always have a backup of the most recent version.
 
-- Line 2 - Write down the 6-digit color hex code from the `style` property, we're going to need this later in the Previous Artists section). Then replace this hex code with the new one* and change the artist name (hyphenated) in `data-brand`.<br>
-	*&ast;To get the hex code, open the poster in Photoshop and use the [Eyedropper tool](https://css-tricks.com/grabbing-hex-codes-for-colors/) to select the color you want*<br>
-	Line 3 - Change the artist name and dates (no month abbrevs).<br>
-	Line 6 - In the image path, change the number and artist name.<br>
-	Line 9 - Replace artist bio.<br>
-	Line 13 - Replace series description.<br>
-	Line 18 - Replace series title.
+- Make the following changes:
+	- Line 2 - Write down the 6-digit color hex code from the `style` property, we're going to need this later in the Previous Artists section. Then 	replace this hex code with a new color* and change the artist name (hyphenated) in `data-brand`.<br>
+	*&ast;To get new hex code, open the poster in Photoshop and use the [Eyedropper tool](https://css-tricks.com/grabbing-hex-codes-for-colors/) to select the color you want*<br>
+	- Line 3 - Change the artist name and dates (no month abbrevs).<br>
+	- Line 6 - In the image path, change the number and artist name.<br>
+	- Line 9 - Replace artist bio.<br>
+	- Line 13 - Replace series description.<br>
+	- Line 18 - Replace series title.
 
-- To move the current artist into the Previous Artists section, paste the following template into line 26 and replace every instance of the artist first/last name. Replace hex code with the one from earlier!
+- To move the current artist into the Previous Artists section, paste the following template into line 26:
 
 	```
 		<div class="col-sm-4">
@@ -83,8 +128,10 @@
 		</div>
 	```
 
-	Make sure the number in the image path is correct, I always mess this up :p
-	Don't forget to change the year and Roman numeral as well.
+	- Replace every instance of artist first/last name.
+	- Replace hex code with the one from earlier!
+	- Make sure the number in the image path is correct, I always mess this up :p
+	- Don't forget to change the year and Roman numeral as well.
 
 - When you're done making changes, copy-paste the complete updated code into Lightspeed:
 
@@ -100,7 +147,7 @@
 
 - Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *add new featured artist Maia Ruth Lee*). Then commit changes.
 
-- If you need to change anything later on, always make sure to include a commit message (ie. *fix typo*)
+- If you need to change anything later on, always include a commit message (ie. *fix typo*)
 
 ===========================================================================
 
