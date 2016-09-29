@@ -18,17 +18,9 @@
 
 - Anything inside of <!--  --> is a comment. Comments are ignored by the browser (for humans only), they don't affect the webpage.
 
-- Their picks are organized within rows and columns, which are also marked:
+- To be continued...
 	```
-	<!-- ## ROW 1 -->
-
-		<!-- ## ROW 1, COLUMN 1 -->
-		<!-- ## ROW 1, COLUMN 2 -->
-
-	<!-- ## ROW 2 -->
-
-		<!-- ## ROW 2, COLUMN 1 -->
-		<!-- ## ROW 2, COLUMN 2 -->
+	TODO: Complete this section
 	```
 	- Click the pencil icon to start editing. Edit the code as needed here on Github, so we always have a backup of the most recent version.
 
@@ -36,15 +28,15 @@
 
 		1. Log in to: http://pictureroom.mcnallyjacksonstore.com/store/admin/login
 
-		2. Go to **Custom Pages > Staff Picks**
+		2. Go to **Custom Pages > Home**
 
 		3. Click the **< >** icon under **Edit Page Content** to switch to HTML view
 
 		4. Replace everything with updated code and click **Save**.
 
-	- Check the [Staff Picks page](http://pictureroom.mcnallyjacksonstore.com/store/staff-picks) to make sure everything looks right. Edit the code if necessary - always edit in Github and then copy paste into Lightspeed to test your changes.
+	- Check the [Home page](http://pictureroom.mcnallyjacksonstore.com/store) to make sure everything looks right. Edit the code if necessary - always edit in Github and then copy paste into Lightspeed to test your changes.
 
-	- Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *update Milah's picks*). Then commit changes.
+	- Once everything checks out, save the code in Github - scroll to the bottom and enter a descriptive commit message (ie. *update slide 2*). Then commit changes.
 
 	- If you need to change anything later on, always include a commit message (ie. *fix typo*)
 
