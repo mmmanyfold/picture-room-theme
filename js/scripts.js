@@ -209,7 +209,7 @@ function bindZoom() {
       // resort
       var r_events = events.sort(function(a, b){
         var sorter = 0;
-        if (moment(a.start_time).unix() < moment(b.start_time).unix()) {
+        if (moment(a.end_time).unix() < moment(b.end_time).unix()) {
           sorter = -1;
         } else {
           sorter = 1;
@@ -219,16 +219,32 @@ function bindZoom() {
 
       var self = this, now = new Date(), template = $("#event-template").html();
       r_events.forEach(function(event) {
-        var end = new Date(event.end_time);
-        if (end >= now) {
-          var data = {
-            name: event.name,
-            description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
-            link: "https://www.facebook.com/events/" + event.id + "/",
-            start: dateFormat(new Date(event.start_time), "dddd mmmm dS, h:MM TT"),
-            place: event.place
+        var end = event.end_time;
+        var start = event.start_time;
+        var endDateTime = String(end).split('T');
+        var startDateTime = String(start).split('T');
+        var endDate = endDateTime[0];
+        var startDate = startDateTime[0];
+        if ((new Date(end)) >= now) {
+          if (startDate === endDate) {
+            var data = {
+              name: event.name,
+              description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
+              link: "https://www.facebook.com/events/" + event.id + "/",
+              start: dateFormat(new Date(event.start_time), "dddd mmmm dS, h:MM TT"),
+              end: dateFormat(new Date(event.end_time), "h:MM TT"),
+              place: event.place
+            };
+          } else {
+            var data = {
+              name: event.name,
+              description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
+              link: "https://www.facebook.com/events/" + event.id + "/",
+              start: dateFormat(new Date(event.start_time), "mmmm dS, h:MM TT"),
+              end: dateFormat(new Date(event.end_time), "mmmm dS, h:MM TT"),
+              place: event.place
+            };
           };
-          if (event.end_time) data['end'] = dateFormat(new Date(event.end_time), "h:MM TT");
           var $event = $(Mustache.render(template, data));
           self.$el.append($event);
         }
