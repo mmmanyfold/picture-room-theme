@@ -226,25 +226,19 @@ function bindZoom() {
         var endDate = endDateTime[0];
         var startDate = startDateTime[0];
         if ((new Date(end)) >= now) {
-          if (startDate === endDate) {
-            var data = {
-              name: event.name,
-              description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
-              link: "https://www.facebook.com/events/" + event.id + "/",
-              start: dateFormat(new Date(event.start_time), "dddd mmmm dS, h:MM TT"),
-              end: dateFormat(new Date(event.end_time), "h:MM TT"),
-              place: event.place
-            };
-          } else {
-            var data = {
-              name: event.name,
-              description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
-              link: "https://www.facebook.com/events/" + event.id + "/",
-              start: dateFormat(new Date(event.start_time), "mmmm dS, h:MM TT"),
-              end: dateFormat(new Date(event.end_time), "mmmm dS, h:MM TT"),
-              place: event.place
-            };
+          var data = {
+            name: event.name,
+            description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
+            link: "https://www.facebook.com/events/" + event.id + "/",
+            place: event.place
           };
+          if (startDate === endDate) {
+            data['start'] = dateFormat(new Date(event.start_time), "dddd mmmm dS, h:MM TT");
+            data['end'] = dateFormat(new Date(event.end_time), "h:MM TT");
+          } else {
+            data['start'] = dateFormat(new Date(event.start_time), "mmmm dS, h:MM TT");
+            data['end'] = dateFormat(new Date(event.end_time), "mmmm dS, h:MM TT");
+          }
           var $event = $(Mustache.render(template, data));
           self.$el.append($event);
         }
