@@ -1,0 +1,64 @@
+{% include 'snippets/breadcrumbs.rain' %}
+
+<!-- <div class="product-grid-carousel" data-alt="{{ product.title }}">
+  <div class="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img alt="null" src="/store/images/product/a/aeschylus-(detail)-2014.png">
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="product-grid">
+<div class="row product-row flex-row">
+{% for product in collection.products %}
+<div class="product_cell col-sm-6" style="margin-bottom:36px;">
+  <div class="product_cell_graphic">
+    <a href="{{ product.url | url }}">
+      <img alt="{{ product.title }}" src="{{ product.image | url_image }}">
+    </a>
+  </div>
+  <div class="product_cell_label">
+    <a href="{{ product.url | url }}">
+      {% if product.brand %}
+        {{ product.brand.title }}<br>
+      {% endif %}
+      {{ product.title }}
+    </a> —
+    <span class="product_cell_price_slash">
+      {% if product.price.price_old %}{{ product.price.price_old | money}}{% endif %}</span>
+    <span class="product_cell_price">{{ product.price.price | money }}</span>
+  </div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+{% set pagination = collection | paginate %}
+{% if collection.pages > 1 %}
+
+<div class="pr-paginator gutter-bottom">
+  <div class="separator gutter-bottom"></div>
+  <div class="row">
+    <div class="col-xs-6">
+      {{ 'Page $1 / $2' | t(collection.page, collection.pages) }}
+    </div>
+    <div class="col-xs-3">
+      <a class="{% if pagination.previous %} prev-page {% else %} hidden {% endif %}"
+         href="{{ pagination.previous.url | url }}"
+         title="{{ 'Previous page' | t }}">← Previous</a>
+      <a class="{% if pagination.next %} next-page {% else %} hidden {% endif %}"
+         href="{{ pagination.next.url | url }}"
+         title="{{ 'Next page' | t }}">→ Next</a>
+    </div>
+    <div class="col-xs-3">
+      <a class="{% if pagination.previous %} first-page {% else %} hidden {% endif %}"
+         href="{{ pagination.parts|first.url | url }}">← First</a>
+      <a class="{% if pagination.next %} last-page {% else %} hidden {% endif %}"
+         href="{{ pagination.parts|last.url | url }}">→ Last</a>
+    </div>
+  </div>
+</div>
+
+{% endif %}

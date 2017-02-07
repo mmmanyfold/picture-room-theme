@@ -1,0 +1,13 @@
+{% include 'snippets/breadcrumbs.rain' %}
+
+<div id="custom_content" class="span12">
+{% if textpage.title == "Featured Artist" %}
+  {% include 'snippets/link-featuredartist.rain' %}
+{% elseif textpage.title == "Staff Picks" %}
+  {% include 'snippets/link-staffpicks.rain' %}
+{% elseif textpage.title == "Event Calendar" %}
+  {% include 'snippets/link-eventcalendar.rain' %}
+{% else %}
+  {% include 'snippets/link-information.rain' %}
+{% endif %}
+</div>

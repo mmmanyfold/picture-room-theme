@@ -1,0 +1,25 @@
+{# snippets/topnav.rain #}
+
+<div class="row row-5-col hidden-xs" id="menubar">
+  <div class="col-sm-5 hidden-xs">
+    <div class="separator"></div>
+  </div>
+   <div class="col-sm-4">
+     <ul class="list-unstyled nav-page clearfix">
+       {% for link in shop.links.service | limit(4) %}
+       <li><a href="{{ link.url | url }}" title="{{ link.title }}">{{ link.title }}</a></li>
+       {% endfor %}
+     </ul>
+   </div>
+   <div class="col-sm-1">
+     <div class="container-search">
+       <form action="{{ 'search' | url }}" method="get" id="formSearch">
+         <input type="text" name="q" id="xlsSearch" autocomplete="off" placeholder="Search..." value="{{ page.search }}"/>
+         <span onclick="$('#formSearch').submit();" title="{{ 'Search' | t }}"></span>
+       </form>
+     </div>
+   </div>
+   <div class="col-sm-5 hidden-xs">
+     <div class="separator"></div>
+   </div>
+</div>

@@ -1,0 +1,43 @@
+{% include 'snippets/breadcrumbs.rain' %}
+
+<div class="product-detail">
+  <h2 class="product-header gutter-top-double gutter-bottom-double text-center">
+  <strong><a href="{{ product.brand.url }}">{{ product.brand.title }}</a></strong>
+	<div id="Product_title">{{ product.title }}</div>
+  </h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="photos">
+        {#{% include 'snippets/productimages.rain' %}#}
+   		</div>
+    </div>
+    <div class="col-sm-6">
+			<div id="Product_description_long" class="description">
+				{{ product.description }}
+			</div>
+			<div class="row gutter-top">
+
+				<form action="{{ ('cart/add/' ~ product.vid) | url }}" id="product_configure_form" method="post">
+					<div class="col-sm-6">
+						{% if product.variants|length > 1 %}
+			        {{ product | html_product_configure | raw }}
+			      {% endif %}
+
+						<div class="price gutter-bottom">
+							{{ product.price.price | money }}
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div id="addToCart">
+							<a href="javascript:;"
+								 onclick="$('#product_configure_form').submit();"
+								 class="btn btn-primary"
+								 title="{{ 'Add to cart' | t }}">{{ 'Add to Cart' | t }}</a>
+						</div>
+					</div>
+		    </form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,89 @@
+{# snippet 'snippets/bundleproduct.rain' #}
+{% if product.bundles %}
+
+  {% for bundle in product.bundles %}
+
+    <div class="products row bundle-actions" >
+
+      <div class="col-md-10 col-sm-10">
+        <div class="product col-xs-3 col-sm-3 col-md-2">
+          <div class="image-wrap">
+            <a href="{{ product.url | url }}" title="{{ product.fulltitle }}">
+              {% if product.image %}
+                {% if theme.product_image_fit %}
+                  <img src="{{ product.image | url_image('210x210x1', product.fulltitle) }}" height="210" width="210" alt="{{ product.fulltitle }}" />
+                  {% else %}
+                  <img src="{{ product.image | url_image('210x210x2', product.fulltitle) }}" height="210" width="210" alt="{{ product.fulltitle }}" />
+                {% endif %}
+                {% else %}
+                <img src="{{ 'blank.gif' | url_asset }}" height="135px" width="135px" alt="{{ product.title }}" title="{{ product.title }}"/>
+              {% endif %}
+            </div>
+            <div class="bundleproductinfo info{% if shop.settings.legal.mode == 'strict' %} strict{% endif %}">
+              <a href="{{ product.url | url }}" title="{{ product.fulltitle }}" class="title no-underline">
+                <h3> {{ product.title }}</h3>
+
+              </a>
+            </div>
+          </div>
+
+          {% for bundleProduct in bundle.products %}
+            <div class="product col-xs-6 col-sm-3 col-md-2">
+              <span class="glyphicon glyphicon-plus glyph-bundle"></span>
+
+              <div class="image-wrap">
+                <a href="{{ bundleProduct.url | url }}" title="{{ bundleProduct.fulltitle }}">
+                  {% if product.image %}
+                    {% if theme.product_image_fit %}
+                      <img src="{{ bundleProduct.image | url_image('210x210x1', product.fulltitle) }}" height="210" width="210" alt="{{ product.fulltitle }}" />
+                      {% else %}
+                      <img src="{{ bundleProduct.image | url_image('210x210x2', product.fulltitle) }}" height="210" width="210" alt="{{ product.fulltitle }}" />
+                    {% endif %}
+                    {% else %}
+                    <img src="{{ 'blank.gif' | url_asset }}" height="135px" width="135px" alt="{{ product.title }}" title="{{ product.title }}"/>
+                  {% endif %}
+                </div>
+                <div class="bundleproductinfo info{% if shop.settings.legal.mode == 'strict' %} strict{% endif %}">
+                  <a href="{{ product.url | url }}" title="{{ product.fulltitle }}" class="title no-underline">
+                    {% if bundleProduct.quantity > 1 %} {{ bundleProduct.quantity }}x {% endif %} {{ bundleProduct.title }}</h3>
+                    </a>
+                  {% if bundleProduct.variant %}
+                    <p>{{ bundleProduct.variant }}</p> {% endif %}
+                  </div>
+                </div>
+                {% if loop.index is divisibleby(3) or loop.index is not divisibleby(5) and loop.last %}
+                {% endif %}
+              {% endfor %}
+
+
+            </div>
+
+  <div class="product bundlecart right">
+                <div class="product-details">
+                  <div class="discount title">
+                    <h3>{{ bundle.title | t }}</h3>
+
+                    {% if bundle.percentage %}
+                      {{ bundle.percentage | percentage }} {{ 'Discount' | t }}
+                    {% endif %}
+                  </div>
+                  {% if bundle.price.price_old != bundle.price.price %}
+                    <div class="old-price line-through">{{ bundle.price.price_old | money }}{% if shop.settings.legal.mode == 'strict' %} <small>*</small>{% endif %} </div>
+                  {% endif %}
+                  <div class="price total">{{ bundle.price.price | money }}{% if shop.settings.legal.mode == 'strict' %} <small>*</small>{% endif %} </div>
+                  <div class="cart">
+                    {% if bundle.stock.available %}
+                      <a href="#" class="btn " onclick="javascript:$('#product_configure_bundle_id').val('{{ bundle.id }}'); $('#product_configure_form').submit(); return false;">{{ 'Add to cart' | t }}</a>
+                      {% else %}
+                      <span class="out-of-stock"><em>{{ 'Out of stock' | t }}</em></span>
+                    {% endif %}
+
+
+                  </span>
+                </div>
+              </div>
+            </div>          </div>
+<hr>
+                  <div class="clearfix"></div>
+{% endfor %}
+{% endif %}

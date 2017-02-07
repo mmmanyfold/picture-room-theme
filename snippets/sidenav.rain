@@ -1,0 +1,10 @@
+{# snippets/sidenav.rain #}
+
+<div class="side-nav hidden-xs">
+  <h3>Shop</h3>
+  <ul id="menutree" class="list-unstyled">
+    {% for category in shop.categories %}
+    <li><a href="{{ category.url | url }}" title="{{ category.title }}">{{ category.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

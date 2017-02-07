@@ -1,0 +1,412 @@
+{# snippets/link-staffpicks.rain #}
+
+<div class="staff-picks" style="margin-top:40px">
+	<div class="row staff-list">
+		<div class="col-sm-6">
+			<ol>
+				<li><a class="staff-member active" data-id="1">Sandeep Salter</a></li>
+				<li><a class="staff-member" data-id="2">Milah Libin</a></li>
+				<li><a class="staff-member" data-id="3">Jessica Butler</a></li>
+			</ol>
+		</div>
+		<div class="col-sm-6">
+			<ol start="4">
+				<li><a class="staff-member" data-id="4">Katie Shepherd</a></li>
+				<li><a class="staff-member" data-id="5">Claire Krouzecky</a></li>
+				<li><a class="staff-member" data-id=“6”>Cassandra Levine</a></li>
+			</ol>
+		</div>
+	</div>
+	<div class="staff-bio active" data-id="1">
+		<h3 class="text-center">
+		<strong>Sandeep Salter</strong>
+		</h3>
+	</div>
+	<div class="staff-bio" data-id="2">
+		<h3 class="text-center">
+		<strong>Milah Libin</strong>
+		</h3>
+	</div>
+	<div class="staff-bio" data-id="3">
+		<h3 class="text-center">
+		<strong>Jessica Butler</strong>
+		</h3>
+	</div>
+	<div class="staff-bio" data-id="4">
+		<h3 class="text-center">
+		<strong>Katie Shepherd</strong>
+		</h3>
+	</div>
+	<div class="staff-bio" data-id="5">
+		<h3 class="text-center">
+		<strong>Claire Krouzecky</strong>
+		</h3>
+	</div>
+	<div class="staff-bio" data-id=“6”>
+		<h3 class="text-center">
+		<strong>Cassandra Levine</strong>
+		</h3>
+	</div>
+
+<!-- EDIT SANDEEP'S PICKS BELOW -->
+<div class="staff-products product-grid active" data-id="1">
+	<div class="row product-row flex-row">
+
+	<!-- SANDEEP #1 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/notes-on-this-show-seemingly-random-violence-2006.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/s/seth-price-notes-on-this-show-seemingly-random-violence-20.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/notes-on-this-show-seemingly-random-violence-2006.html">
+				Seth Price<br>
+				Notes On This Show: Seemingly Random Violence…, 2006
+			</a></p>
+		</div>
+		</div>
+
+	<!-- SANDEEP #2 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/hollywood-rd-small-white-2015-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/p/pia-howell-hollywood-rd-(small-white)-2015.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/hollywood-rd-small-white-2015-framed-unframed.html">
+				Pia Howell<br>
+				Hollywood Rd. (Small White), 2015
+			</a></p>
+		</div>
+		</div>
+
+	<!-- SANDEEP #3 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/kalochrome-2014-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/m/michael-portnoy-kalochrome-framed-signed-2014.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/kalochrome-2014-framed-unframed.html">
+				Michael Portnoy<br>
+				Kalochrome, 2014
+			</a></p>
+		</div>
+		</div>
+
+	<!-- SANDEEP #4 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/richard-kostelanetz-string-two-2015-framed-unframe.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/r/richard-kostelanetz-string-two-2015.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/richard-kostelanetz-string-two-2015-framed-unframe.html">
+				Richard Kostelanetz<br>
+				String Two, 2015
+			</a></p>
+		</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- EDIT MILAH'S PICKS BELOW -->
+<div class="staff-products product-grid" data-id="2">
+	<div class="row product-row flex-row">
+
+	<!-- MILAH #1 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/aidan-koch-impressions-2014-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/i/impressions-2014-framed.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/aidan-koch-impressions-2014-framed-unframed.html">
+				Aidan Koch<br>
+				Impressions, 2014
+			</a></p>
+		</div>
+		</div>
+
+	<!-- MILAH #2 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/exhibition-poster-script-1980-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/e/exhibition-poster-script-1980-framed-unframed.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/exhibition-poster-script-1980-framed-unframed.html">
+				Cy Twombly<br>
+				Exhibition Poster (Script), 1980
+			</a></p>
+		</div>
+		</div>
+
+	<!-- MILAH #3 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/dan-graham-artist-proofs-from-three-years-2000-200.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/d/dan-graham-artist-proofs-from-three-years-framed-2000-2003-2.png"></a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/dan-graham-artist-proofs-from-three-years-2000-200.html">
+				Dan Graham<br>
+				Artist Proofs from three years, 2000, 2003, 2013
+			</a></p>
+		</div>
+		</div>
+
+	<!-- MILAH #4 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/crash-2010.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/c/crash-2010.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/crash-2010.html">
+				JG Ballard<br>
+				Crash, 2010
+			</a></p>
+		</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- EDIT JESSICA'S PICKS BELOW -->
+<div class="staff-products product-grid" data-id="3">
+	<div class="row product-row">
+
+	<!-- JESSICA #1 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/aidan-koch-the-blonde-woman-2012-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/t/the-blonde-woman-2012-framed.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/aidan-koch-the-blonde-woman-2012-framed-unframed.html">
+				Aidan Koch<br>
+				The Blonde Woman, 2012
+			</a></p>
+		</div>
+		</div>
+
+	<!-- JESSICA #2 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/kayla-guthrie-nv-2015-framed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/k/kayla-guthrie-nv-2015.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/kayla-guthrie-nv-2015-framed.html">
+				Kayla Guthrie<br>
+				N.V., 2015
+			</a></p>
+		</div>
+		</div>
+
+	<!-- JESSICA #3 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/hollywood-rd-large-2015-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/h/hollywood-rd-(large)-2015-butt-with-column-unframed.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/hollywood-rd-large-2015-framed-unframed.html">
+				Pia Howell<br>
+				Hollywood Rd. (Butt With Column), 2015
+			</a></p>
+		</div>
+		</div>
+
+	<!-- JESSICA #4 -->
+
+	</div>
+</div>
+
+<!-- EDIT KATIE'S PICKS BELOW -->
+<div class="staff-products product-grid" data-id="4">
+	<div class="row product-row">
+
+	<!-- KATIE #1 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/the-paris-review-1965-framed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/l/louise-nevelson-the-paris-review-untitled-print-framed-1982.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/the-paris-review-1965-framed.html">
+				Louise Nevelson<br>
+				The Paris Review, 1965
+			</a></p>
+		</div>
+		</div>
+
+	<!-- KATIE #2 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/3-dialogues-1977-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/3/3-dialogues-1977-framed-unframed.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/3-dialogues-1977-framed-unframed.html">
+				Cy Twombly<br>
+				3 Dialogues, 1977
+			</a></p>
+		</div>
+		</div>
+
+	<!-- KATIE #3 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/pieta-in-reverse-2013.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/%C3%A5/%C3%A5b%C3%A4ke-pieta-in-reverse-2012.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/pieta-in-reverse-2013.html">
+				Abake<br>
+				Pieta In Reverse, 2013
+			</a></p>
+		</div>
+		</div>
+
+	<!-- KATIE #4 -->
+
+	</div>
+</div>
+
+<!-- EDIT CLAIRE'S PICKS BELOW -->
+
+<div class="staff-products product-grid" data-id="5">
+	<div class="row product-row">
+
+	<!-- CLAIRE #1 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/screen-studies-2015-framed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/s/screen-studies-2015-framed-unframed.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/screen-studies-2015-framed-unframed.html">
+				L.A. Hindmarsh<br>
+				Screen Studies, 2015
+			</a></p>
+		</div>
+		</div>
+
+	<!-- CLAIRE #2 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/the-mirror-of-genoveva-sms-portfolio-no-2-1968.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/m/meret-oppenheim-the-mirror-of-genoveva-sms-portfolio-no-2-19.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/the-mirror-of-genoveva-sms-portfolio-no-2-1968.html">
+				Meret Oppenheim<br>
+				The Mirror of Genoveva, SMS Portfolio No. 2, 1968
+			</a></p>
+		</div>
+		</div>
+
+	<!-- CLAIRE #3 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/yaz-norris-techniques-of-the-observer-etchings-201.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/t/techniques-of-the-observer-etchings-2015-framed-unframed.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/yaz-norris-techniques-of-the-observer-etchings-201.html">
+				Yaz Norris<br>
+				Techniques of the Observer Etchings, 2015
+			</a></p>
+		</div>
+		</div>
+
+	<!-- CLAIRE #4 -->
+
+	</div>
+</div>
+
+<!-- EDIT CASSANDRA’S PICKS BELOW -->
+<div class="staff-products product-grid" data-id=“6”>
+	<div class="row product-row">
+
+	<!-- CASSANDRA #1 -->
+		<div class="col-sm-6">
+		<div class="product_cell">
+			<div class="product_cell_graphic">
+			<!-- EDIT PRODUCT URL -->
+			<a href="/richard-kostelanetz-kill-slay-1975-signed-unframed.html">
+			<!-- EDIT IMAGE URL -->
+			<img src="/images/product/k/kill-slay%E2%80%A6-1975-signed-framed-unframed.png"> </a>
+			</div>
+			<!-- EDIT PRODUCT URL, ARTIST NAME, AND PRODUCT NAME -->
+			<p><a href="/richard-kostelanetz-kill-slay-1975-signed-unframed.html">
+				Richard Kostelanetz<br>
+				KILL, SLAY…, 1975
+			</a></p>
+		</div>
+		</div>
+
+	<!-- CASSANDRA #2 -->
+
+	<!-- CASSANDRA #3 -->
+
+	<!-- CASSANDRA #4 -->
+
+	</div>
+</div>
+
+</div>

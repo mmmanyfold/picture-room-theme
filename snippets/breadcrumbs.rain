@@ -1,0 +1,8 @@
+{# snippets/breadcrumbs.rain #}
+
+<div class="breadcrumbs">
+  <a href="{{ "" | url }}">Home</a>
+  {% for breadcrumb in page.breadcrumbs %}
+    — <a href="{{ breadcrumb.url | url }}">{{ breadcrumb.title }}</a>
+  {% endfor %}
+</div>
