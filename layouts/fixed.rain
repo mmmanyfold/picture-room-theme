@@ -3,12 +3,6 @@
   <head>
   	<meta charset="utf-8">
   	<title>{{ shop.name }}</title>
-  	<link rel="canonical" href="{{ shop.canonical }}"/>
-  	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
-  	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
-  	<!-- <script src="https://code.jquery.com/jquery-1.9.1.js"></script> -->
-  	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
   	<meta name="description" content="{{ shop.description }}">
   	<meta property="og:title" content="{{ shop.name }}"/>
@@ -18,47 +12,84 @@
   	<meta name="p:domain_verify" content="7db2449c1034085a062d03f667333e09"/>
 
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="shortcut icon" href="{{ 'favicon.png' | url_asset }}" />
+
+  	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   	<link rel="shortcut icon" href="{{ 'favicon.ico' | url_asset }}" />
-
-  	<!-- <?php
-  		Yii::app()->getClientScript()->registerCoreScript('jquery');
-
-  		if (isset(Yii::app()->params['modal_css']))
-  		{
-  			Yii::app()->getClientScript()->registerCssFile(Yii::app()->params['modal_css']);
-  		}
-
-  		$asset = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('ext') . '/wsadvcheckout/assets');
-  		Yii::app()->clientScript->registerScriptFile($asset . '/checkout.js', CClientScript::POS_HEAD);
-  	?> -->
-
     <link rel="stylesheet" type="text/css" href="{{ 'styles.min.css' | url_asset }}">
+    <link rel="stylesheet" type="text/css" href="{{ 'styles-cart.css' | url_asset }}">
 
-  	<!-- <?php $this->widget('ext.wsiosorientationbugfix.iosorientationbugfix'); ?>
-  	<?php $this->renderPartial('/site/_google'); ?>
-  	<?php $this->renderPartial('ext.wscartmodal.views._cartscript'); ?>
-  	<?php $this->renderPartial('ext.wsadvcheckout.views._advcheckoutscript'); ?> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+  	<script type="text/javascript" src="{{ 'gui.js' | url_core }}"></script>
+    <script type="text/javascript" src="{{ 'gui-responsive-2-0.js' | url_core }}"></script>
   </head>
 
   <body>
-    <div id="container" class="container">
-      {% include 'snippets/header.rain' %}
-      {% include 'snippets/topnav.rain' %}
-      <div class="row row-5-col">
-        <div class="col-sm-1">
-					{% include 'snippets/sidenav.rain' %}
+    <div id="container" class="container" style="max-width: 840px;">
+      <div class="row row-5-col nav-top">
+        <div class="col-sm-5">
+          <h1 style="margin-bottom:0.55em"><a href="{{ '' | url }}">{{ shop.name }}</a></h1>
         </div>
-        <div class="col-sm-4">
-          <div id="viewport">
+      </div>
+      <div class="row row-5-col">
+        <div class="col-sm-5">
+          <div class="webstore-overlay-cart">
   					{% include template %}
   				</div>
         </div>
       </div>
-
-			<!-- footer -->
-			{% include 'snippets/footer.rain' %}
 		</div>
-    <script type="text/javascript" src="{{ 'scripts.min.js' | url_asset }}"></script>
+    <script>
+      $('.gui-button-large.gui-button-action').html('Checkout');
+      $('.gui-cart-sum .gui-desc').html('Subtotal');
+      $('select').addClass('form-control');
+      $('.gui-action-delete').html('×');
+      $('th').html(function(i, html){
+        return html.replace('<span class="gui-nowrap">Item price</span>', '<span class="gui-nowrap">Price</span>');
+      });
+      $('th').html(function(i, html){
+        return html.replace('<span class="gui-nowrap">Quantity</span>', '<span class="gui-nowrap">Qty.</span>');
+      });
+      $('th').html(function(i, html){
+        return html.replace('<span class="gui-nowrap">Subtotal</span>', '<span class="gui-nowrap">Total</span>');
+      });
+      $('table tbody tr').each(function() {
+        var tr = $(this);
+        var qty = tr.find('td:eq(2)'); // indices are zero-based here
+        var price = tr.find('td:eq(4)');
+        var rm = tr.find('td:eq(3)');
+        var total = tr.find('td:eq(5)');
+        qty.detach().insertAfter(price);
+        rm.detach().insertAfter(total);
+      });
+      $('table thead tr').each(function() {
+        var tr = $(this);
+        var qty = tr.find('th:eq(1)'); // indices are zero-based here
+        var price = tr.find('th:eq(3)');
+        var space = tr.find('th:eq(2)');
+        var total = tr.find('th:eq(4)');
+        qty.detach().insertAfter(price);
+        space.detach().insertAfter(total);
+      });
+      $(document).ready(function() {
+        checkSize();
+        $(window).resize(checkSize);
+      });
+      function checkSize(){
+        if ($('.webstore-overlay-cart .gui-valign-top').css('display') == "none"){
+          $('tbody tr td:nth-child(2)').attr('colspan', '2');
+          $('#gui-form-shipment tbody tr td:last-child').attr('colspan', '1');
+        } else {
+          $('tbody tr td:nth-child(2)').attr('colspan', '0');
+        }
+      }
+      $('tbody tr:last-child td:nth-child(1)').attr('colspan', '5');
+      $('#gui-form-shipment td:last-child').html('<a href="javascript:;" onclick="$(\'#gui-form-shipment\').submit();" class="gui-button-inset" title="View">View</a>');
+      $('.gui-button-facebook').html('Login with Facebook');
+    </script>
   </body>
 
 </html>

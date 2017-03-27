@@ -1,15 +1,5 @@
 {% include 'snippets/breadcrumbs.rain' %}
 
-<!-- <div class="product-grid-carousel" data-alt="{{ product.title }}">
-  <div class="carousel">
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img alt="null" src="/store/images/product/a/aeschylus-(detail)-2014.png">
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <div class="product-grid">
 <div class="row product-row flex-row">
 {% for product in collection.products %}

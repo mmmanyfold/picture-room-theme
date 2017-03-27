@@ -1,15 +1,5 @@
 {# snippets/header.rain #}
 
-<!-- <script>
-	$(function() {
-		$("#topbar-cart-text").on('click', function(e) {
-			showEditCartModal(<?= CJSON::encode(Yii::app()->createUrl('editcart')) ?>);
-			//prevents default link behavior that causes the cart modal to be called twice
-			e.preventDefault();
-		});
-	});
-</script> -->
-
 <div class="row row-5-col nav-top">
   <div class="col-sm-push-1 col-sm-3 col-md-2">
     <h1><a href="{{ '' | url }}">{{ shop.name }}</a></h1>

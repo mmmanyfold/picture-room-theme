@@ -10,8 +10,16 @@
 </div>
 <hr />
 <div class="row">
-<div class="col-sm-6 hours-info"><strong>Picture Room</strong><br /> McNally Jackson Store <br /> <br /> 117 Atlantic Ave. <br /> Brooklyn, NY — 11201 <br /> <br /> <strong>Open</strong><br /> Monday — Sunday <br /> Noon — 8PM <br /> <br /> <strong>T</strong> +1 (212) 219 2789<br /> <strong>E</strong> <a href="mailto:info@pictureroom.com">info@mcnallyjacksonstore.com</a></div>
-<div class="col-sm-6"><iframe style="border: 0;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCZeETo9ZwokRITCV8BIDpo8&key=AIzaSyCp6bZ5RWTT1mKVYO9XkdwZ3qyIL-vaers" width="100%" height="383" frameborder="0" allowfullscreen="allowfullscreen">
+<div class="col-sm-6 hours-info"><strong>Picture Room</strong><br />117 Atlantic Ave. <br /> Brooklyn, NY — 11201 <br /> <br /> <strong>Hours</strong><br />
+  M: Closed<br>
+  T: 1 PM - 6 PM<br>
+  W: 1 PM - 6 PM<br>
+  Th: 1 PM - 7 PM<br>
+  F: 11 AM - 8 PM<br>
+  S: 11 AM - 8 PM<br>
+  S: 11 AM - 5 PM
+  <br /> <br /> <strong>T</strong> +1 (718) 935 1870<br /> <strong>E</strong> <a href="mailto:info@pictureroom.shop">info@pictureroom.shop</a></div>
+<div class="col-sm-6"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.227164294386!2d-73.99849778457352!3d40.69099437933417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f4e849709%3A0x8fa60312f0953021!2sPicture+Room!5e0!3m2!1sen!2sus!4v1490411353034" width="100%" height="383" frameborder="0" allowfullscreen="allowfullscreen">
     </iframe></div>
 </div>
 <hr />

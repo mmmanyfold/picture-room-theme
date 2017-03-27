@@ -1,23 +1,16 @@
 {# snippets/link-featuredartist.rain #}
 
 <div class="featured-artists">
-<div class="featured-artist active" style="color: #ffad74;" data-brand="aidan-koch">
-<h2 class="text-center page-title"><strong>Aidan Koch</strong>05 December – 04 January</h2>
-<div class="row">
-<div class="col-xs-6 col-sm-3 artist-icon"><img src="{{ 'PR-Posters-14-Aidan_Koch.jpg' | url_asset }}" /></div>
-<div class="col-xs-6 col-sm-3 artist-bio">Aidan Koch, b. 1988 Seattle, WA, is an artist and graphic novelist. She received the 2012 Xeric Grant, and was a finalist for the Oregon Book Awards, Literary Arts. Solo exhibitions include Mood Board at Mission Comics, Notes at City Limits, Mortals at Farewell Books, The Marble Hand at Nationale, and The Dancer at Midnight at Huis Haas. Koch currently lives and works in Brooklyn, New York.</div>
-<div class="col-xs-12 col-sm-6">
-<p>For the months of December and January, Picture Room will feature a series of illustrations by artist and graphic novelist Aidan Koch.</p>
-<p>Known for her elliptical comics that emphasize tone over narrative, Aidan Koch’s work engages subtraction, silence, and space with a careful hand. Koch works directly and intuitively, allowing the compositions and narratives to form throughout her process, then adjusts accordingly. In this series of notebook sketches of Koch’s observations at various museums around the world, we are given insight into the development of her own iconography. Collecting multiple images on each page, Koch’s torn-out journal sketches have a visual language similar to that of a vintage tattoo flash sheet. Consequently, Koch has used the pages as such, hand-poking many of the drawings in this series. The sketches act almost as blueprints, or subtle inspiration, for future works, including brass sculptures, jewelry, comics, tattoos, and more. Koch opens a window into her private journals here at Picture Room.</p>
-</div>
-</div>
-<hr />
-<h2 class="text-center gutter-bottom">CAPTURE — Works</h2>
+<div class="featured-artist active" style="color: #000;">
+<h2 style="margin-bottom: 0.5em" class="text-center page-title"><strong>Hayden Dunham</strong></h2>
+<h4 style="margin: 0 0 2.5em 0; font-style: italic" class="text-center">Coming May 2017</h4>
 </div>
 </div>
 <div class="previous-artists">
 <h3>Previous Featured Artists</h3>
-<div style="display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap;"><!-- ## ADD A PREVIOUS ARTIST DIRECTLY BELOW THIS COMMENT -->
+<div style="display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap;">
+  <!-- ## ADD A PREVIOUS ARTIST DIRECTLY BELOW THIS COMMENT -->
+<div class="col-sm-4"><a style="color: #ffad74;" href="/brands/aidan-koch"> <img src="{{ 'PR-Posters-14-Aidan_Koch.jpg' | url_asset }}" alt="Aidan Koch" /> 2017.XIV </a></div>
 <div class="col-sm-4"><a style="color: #00838b;" href="/brands/joana-avillez"> <img src="{{ 'PR-Posters-13-Joana_Avillez.jpg' | url_asset }}" alt="Joana Avillez" /> 2016.XIII </a></div>
 <div class="col-sm-4"><a style="color: #2d2926;" href="/brands/maia-ruth-lee"> <img src="{{ 'PR-Posters-12-Maia_Ruth_Lee.jpg' | url_asset }}" alt="Maia Ruth Lee" /> 2016.XII </a></div>
 <div class="col-sm-4"><a class="baby-blue" href="/brands/natalie-weinberger"> <img src="{{ 'PR-Posters-11-Natalie_Weinberger.jpg' | url_asset }}" alt="Natalie Weinberger" /> 2016.XI </a></div>

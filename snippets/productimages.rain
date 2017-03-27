@@ -2,19 +2,21 @@
 
 <div class="pr-photos">
   {% for image in product.images %}
-  <div class="image"
-       data-image="{{ image | url_image('512x512', product.fulltitle) }}"
-       data-thumb="{{ image | url_image('256x256') }}"
+    <div class="image"
+       data-image="{{ image | url_image('', product.fulltitle) }}"
+       data-thumb="{{ image | url_image('256x256x1', product.fulltitle) }}"
        data-alt="{{ product.fulltitle }}">
-  </div>
+    </div>
   {% endfor %}
 </div>
 
 <script type="text/html" id="product-carousel-template">
+{% verbatim %}
   <div class="primary-image">
     <a href="#" class="zoom">+ ZOOM</a>
     <img src="{{ primary_image.image }}" alt="{{ primary_image.alt }}" />
   </div>
+
   {{#multiple_images}}
   <div class="row row-5-col gutter-top pr-photos-toolbar">
     <div class="col-xs-1"><span class="current-index">1</span> / {{ total_images }}</div>
@@ -27,10 +29,13 @@
     {{/images}}
   </div>
   {{/multiple_images}}
+{% endverbatim %}
 </script>
 
 <script type="text/html" id="image-zoom-template">
+{% verbatim %}
 <div class="pr-overlay overlay-zoom">
   <img src="{{ image }}" alt="{{ alt }}" />
 </div>
+{% endverbatim %}
 </script>

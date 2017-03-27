@@ -9,34 +9,42 @@
   <div class="row">
     <div class="col-sm-6">
       <div id="photos">
-        {#{% include 'snippets/productimages.rain' %}#}
+        {% include 'snippets/productimages.rain' %}
    		</div>
     </div>
     <div class="col-sm-6">
 			<div id="Product_description_long" class="description">
-				{{ product.description }}
+				{{ product.content | raw }}
 			</div>
 			<div class="row gutter-top">
 
-				<form action="{{ ('cart/add/' ~ product.vid) | url }}" id="product_configure_form" method="post">
-					<div class="col-sm-6">
-						{% if product.variants|length > 1 %}
-			        {{ product | html_product_configure | raw }}
-			      {% endif %}
+        <form action="{{ ('cart/add/' ~ product.vid) | url }}" id="product_configure_form" method="post">
+          <div class="col-sm-6">
+            {% if product.matrix %}
+              {{ product | html_product_configure | raw }}
+            {% else %}
+              <input type="hidden" name="bundle_id" id="product_configure_bundle_id" value="">
+            {% endif %}
 
 						<div class="price gutter-bottom">
 							{{ product.price.price | money }}
 						</div>
-					</div>
-					<div class="col-sm-6">
-						<div id="addToCart">
-							<a href="javascript:;"
-								 onclick="$('#product_configure_form').submit();"
-								 class="btn btn-primary"
-								 title="{{ 'Add to cart' | t }}">{{ 'Add to Cart' | t }}</a>
-						</div>
-					</div>
-		    </form>
+    			</div>
+    			{% if product.stock.available %}
+  			    <input class="hidden" name="quantity" type="text" value= "1">
+  			    <div class="col-sm-6">
+  						<div id="addToCart">
+  							<a href="javascript:;"
+  								 onclick="$('#product_configure_form').submit();"
+  								 class="btn btn-primary"
+  								 title="{{ 'Add to cart' | t }}">{{ 'Add to Cart' | t }}</a>
+  						</div>
+  					</div>
+  			  {% else %}
+            {{ 'Out of stock' | t }}
+          {% endif %}
+        </form>
+
 			</div>
 		</div>
 	</div>

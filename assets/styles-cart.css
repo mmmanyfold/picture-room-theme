@@ -1,0 +1,364 @@
+.gui-page-content {margin: 1.5em 0;}
+
+.gui-cart .gui-messages, .gui-progressbar, .gui-handle, .cart_variant, .gui-table .gui-button-small, .gui-div-cart-coupons .gui-block:first-child .gui-block-title, .gui-popover, #gui-form-shipment .gui-value, .gui-checkout-shipping #gui-form .gui-value, .gui-checkout-progress, .gui-block-details-company, .gui-address-row-1 .gui-col2-equal-col2,
+.gui-checkout-details .gui-value, .gui-checkout-shipping .gui-required
+  {display:none;}
+
+.gui-page-title {
+  font-size:1.25em;
+  border-bottom: 2px solid black;
+  padding-bottom: 15px;
+  margin-bottom: 12px;
+}
+
+.gui-messages {
+  margin: 30px 0;
+}
+
+.gui-messages ul, .messages ul {
+  list-style-type: none;
+}
+
+.gui-error {
+  color: red;
+}
+
+.gui-right {
+  margin: 1.5em 0 0 0.5em;
+}
+
+.gui-checkout-steps .gui-right {
+  margin: 0;
+}
+
+.gui-block-subtitle {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.gui-hide, label[for="gui-form-details-sameaddress-yes"] {
+  visibility: hidden;
+}
+
+.gui-required {
+  margin-bottom: 1em;
+  text-align: right;
+  font-size: 0.9em;
+}
+
+.gui-button-large.gui-button-action {
+  float: right;
+  font-size: 1.3em;
+  background-color: black;
+  padding: 12px;
+  width: 180px;
+  text-align: center;
+}
+
+a.gui-button-large.gui-button-action {
+  color: white;
+  text-decoration: none !important;
+}
+
+.gui-button-small {
+  border: 1px solid black;
+  padding: 7px 8px;
+  text-decoration: none !important;
+}
+
+a.gui-button-small:hover {
+  color: white;
+  background-color: black;
+}
+
+.gui-div-cart-coupons div:nth-child(3) .gui-block-title {
+  font-size: 1.2em;
+}
+
+input {
+  border: 2px solid #000;
+  padding: 10px;
+  outline: none;
+}
+
+.webstore-overlay-cart .gui-table .gui-number {
+  width: 5.5rem;
+  text-align: center;
+}
+
+.webstore-overlay-cart .gui-table input {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+.webstore-overlay-cart .gui-table table {
+  width: 100%;
+}
+
+.webstore-overlay-cart .gui-table th {
+  padding-bottom: 12px;
+  font-size: 20px;
+}
+
+.webstore-overlay-cart .gui-table thead tr th.gui-align-right {
+  text-align: right;
+  padding: 0 10px;
+}
+
+.webstore-overlay-cart .gui-table a {
+  text-decoration: none !important;
+}
+
+.webstore-overlay-cart .gui-table tbody tr:last-child a {
+  font-size: 1em;
+  text-decoration: underline !important;
+}
+
+.webstore-overlay-cart .gui-table tbody tr td {
+  padding: 12px 0;
+}
+
+.webstore-overlay-cart .gui-table tbody td:nth-child(1) {
+  width: 70px;
+}
+
+.webstore-overlay-cart .gui-table tbody td:nth-child(3),
+.webstore-overlay-cart .gui-table tbody td:nth-child(5) {
+  text-align: right;
+  padding: 0 10px;
+}
+
+a.gui-action.gui-action-delete {
+  margin-left: 5px;
+  font-size: 1.1em;
+  padding: 0 4px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+a.gui-action.gui-action-delete:hover {
+  background-color: black;
+  color: white;
+}
+
+.gui-div-cart-coupons {
+  width: 40%;
+  margin-left: 25%;
+}
+
+.gui-div-cart-coupons {
+  float: left;
+}
+
+input#gui-form-code {
+  width: 17.5em;
+}
+
+.gui-div-cart-shipping {
+  margin: 1.5em 0;
+}
+
+#gui-form-shipment, #gui-form-shipping {
+  margin-top: 1em;
+}
+
+select#gui-form-country {
+  width: 20em;
+  margin: 0 0 0.5em 1px;
+}
+
+#gui-form-shipment table {
+  border: 2px solid black;
+  width: 17.65em;
+}
+
+#gui-form-shipment .gui-input {
+  width:8.5em;
+}
+
+.gui-button-inset {
+  font-size: 12px;
+  border: 1px solid black !important;
+  margin: 5px;
+  padding: 8px 9px;
+  text-decoration: none !important;
+}
+
+a.gui-button-inset:hover {
+  color: white;
+  background-color: black;
+}
+
+#gui-form-zipcode {
+  border: none;
+}
+
+.gui-div-cart-sum {
+  float: right;
+}
+
+.gui-field .gui-radio label {
+  margin: 0 0 0 0.5em;
+}
+
+.gui-field .gui-description {
+  margin: 0 0 0.6em 1.6em;
+}
+
+.gui-cart-sum .gui-desc, .gui-cart-sum .gui-price {
+  display: inline-block;
+}
+
+.gui-cart-sum .gui-desc {
+  margin-right: 3em;
+}
+
+.gui-cart-sum .gui-price {
+  margin-right: 35px;
+}
+
+.gui-checkout-steps .gui-block-title {
+  font-size: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid black;
+}
+
+.gui-col2-equal-col1, .gui-col2-equal-col2 {
+  width: 49%;
+  padding: 24px 12px 24px 0;
+}
+
+.gui-col2-equal-col1 {
+  float: left;
+}
+
+.gui-col2-equal-col2 {
+  float: right;
+  border-left: 2px solid black;
+  padding-left: 24px;
+}
+
+.gui-checkout-steps .gui-left, .gui-checkout-steps .gui-right {
+  margin: 1em 0;
+}
+
+#gui-form-login label, .gui-checkout-details label, .gui-checkout-shipping label {
+  margin: 0;
+}
+
+.gui-checkout-steps .gui-radio, .gui-button-facebook {
+  margin-left: 5px;
+}
+
+.gui-checkout-steps input[type="text"], .gui-checkout-steps input[type="password"],
+.gui-checkout-steps input[type="email"] {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.gui-block-content {
+  padding-top: 1em;
+}
+
+.gui-checkout-review .gui-block-content {
+  padding-top: 0;
+}
+
+.gui-checkout-review thead {
+  border: none;
+}
+
+.gui-checkout-details .gui-col2-equal-col2, .gui-checkout-shipping .gui-col2-equal-col2 {
+  border: none;
+}
+
+.gui-checkout-details .gui-col2-equal-col2, .gui-checkout-details .gui-col2-equal-col1,
+.gui-checkout-shipping .gui-col2-equal-col2, .gui-checkout-shipping .gui-col2-equal-col1 {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.gui-checkout-details select, .gui-checkout-shipping select {
+  height: 46px;
+  margin-bottom: 8px;
+}
+
+.gui-checkout-details input#gui-form-details-sameaddress-yes {
+  visibility: hidden;
+}
+
+.gui-address-row-1 .gui-col2-equal-col1 {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .webstore-overlay-cart .gui-table .gui-valign-top,
+  .webstore-overlay-cart .gui-table thead tr th:nth-child(2),
+  .webstore-overlay-cart .gui-table tbody tr td:nth-child(3) {
+    display: none;
+  }
+  /*.gui-checkout-steps .gui-block-title {*/
+  /*  padding: 0 0 12px 0;*/
+  /*}*/
+  .webstore-overlay-cart .gui-table thead tr th:nth-child(4) {
+    text-align: right;
+  }
+  .webstore-overlay-cart .gui-table tbody td:nth-child(4) {
+    text-align: center;
+  }
+  .webstore-overlay-cart .gui-table tbody td:nth-child(5) {
+    padding-left: 5px;
+  }
+  .webstore-overlay-cart .gui-table .gui-number {
+    width: 4.75rem;
+  }
+  .gui-table td.gui-align-right {
+    width: 17%;
+  }
+  a.gui-action.gui-action-delete {
+    font-size: 1em;
+    margin-left: 5px;
+  }
+  .gui-div-cart-coupons, .gui-div-cart-sum {
+    margin-left: 0;
+    width: 100%;
+  }
+  .gui-right {
+    margin: 1.5em 0;
+  }
+  .gui-desc {
+    float: left;
+  }
+  .gui-price {
+    float: right;
+  }
+  .gui-price, .gui-desc {
+    font-size: 1.3em;
+    margin: 1em 0 !important;
+  }
+  .gui-button-large.gui-button-action {
+    width: 100%;
+  }
+  .webstore-overlay-cart .gui-table tbody tr:last-child td {
+    padding: 22px 0 30px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .gui-checkout-steps .gui-block-title {
+    border: none;
+  }
+  .gui-col2-equal-col2 {
+    border-left: none;
+  }
+  .gui-col2-equal-col2, .gui-col2-equal-col1 {
+    border-top: 2px solid black;
+    padding-left: 12px;
+  }
+  .gui-checkout-details .gui-col2-equal-col2, .gui-checkout-details .gui-col2-equal-col1,
+  .gui-checkout-shipping .gui-col2-equal-col2, .gui-checkout-shipping .gui-col2-equal-col1 {
+    border: none;
+  }
+}

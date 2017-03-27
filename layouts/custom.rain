@@ -2,13 +2,11 @@
 <html lang="{{ shop.language }}">
   <head>
   	<meta charset="utf-8">
-  	<title>{{ shop.name }}</title>
-  	<link rel="canonical" href="{{ shop.canonical }}"/>
-  	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
-  	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
-  	<!-- <script src="https://code.jquery.com/jquery-1.9.1.js"></script> -->
-  	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  	{% if template == "pages/index.rain" %}
+  	<title>Home : {{ shop.name }}</title>
+  	{% else %}
+  	<title>{{ page.title }} : {{ shop.name }}</title>
+  	{% endif %}
 
   	<meta name="description" content="{{ shop.description }}">
   	<meta property="og:title" content="{{ shop.name }}"/>
@@ -20,24 +18,12 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="shortcut icon" href="{{ 'favicon.png' | url_asset }}" />
 
-  	<!-- <?php
-  		Yii::app()->getClientScript()->registerCoreScript('jquery');
-
-  		if (isset(Yii::app()->params['modal_css']))
-  		{
-  			Yii::app()->getClientScript()->registerCssFile(Yii::app()->params['modal_css']);
-  		}
-
-  		$asset = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('ext') . '/wsadvcheckout/assets');
-  		Yii::app()->clientScript->registerScriptFile($asset . '/checkout.js', CClientScript::POS_HEAD);
-  	?> -->
-
+  	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ 'styles.min.css' | url_asset }}">
 
-  	<!-- <?php $this->widget('ext.wsiosorientationbugfix.iosorientationbugfix'); ?>
-  	<?php $this->renderPartial('/site/_google'); ?>
-  	<?php $this->renderPartial('ext.wscartmodal.views._cartscript'); ?>
-  	<?php $this->renderPartial('ext.wsadvcheckout.views._advcheckoutscript'); ?> -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   </head>
 
   <body>
