@@ -2,32 +2,45 @@
 <html lang="{{ shop.language }}">
   <head>
   	<meta charset="utf-8">
-  	<title>{{ shop.name }}</title>
+    <title>{{ page.title }} : {{ shop.name }}</title>
 
   	<meta name="description" content="{{ shop.description }}">
   	<meta property="og:title" content="{{ shop.name }}"/>
   	<meta property="og:description" content="{{ shop.description }}"/>
   	<meta property="og:image" content="{{ 'PR-Homepage-1-Welcome.jpg' | url_asset }}"/>
   	<meta property="og:url" content="{{ shop.canonical }}"/>
-  	<meta name="p:domain_verify" content="7db2449c1034085a062d03f667333e09"/>
 
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="shortcut icon" href="{{ 'favicon.png' | url_asset }}" />
 
-  	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  	<link rel="shortcut icon" href="{{ 'favicon.ico' | url_asset }}" />
-    <link rel="stylesheet" type="text/css" href="{{ 'styles.min.css' | url_asset }}">
-    <link rel="stylesheet" type="text/css" href="{{ 'styles-cart.css' | url_asset }}">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
-  	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
-  	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-
-  	<script type="text/javascript" src="{{ 'gui.js' | url_core }}"></script>
-    <script type="text/javascript" src="{{ 'gui-responsive-2-0.js' | url_core }}"></script>
+  	{% if '/account/password' in shop.canonical or '/account/login' in shop.canonical  %}
+	    <link rel="stylesheet" type="text/css" href="{{ 'styles.min.css' | url_asset }}">
+      <link rel="stylesheet" type="text/css" href="{{ 'styles-checkout-min.css' | url_asset }}">
+      <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    	<script type="text/javascript" src="{{ 'gui.js' | url_core }}"></script>
+    {% else %}
+    	{% if '/account' in shop.canonical %}
+        <link rel="stylesheet" href="{{ 'bootstrap.css' | url_asset }}" />
+        <link rel="stylesheet" href="{{ 'style-conform.css' | url_asset }}" />
+        <link rel="stylesheet" href="{{ 'settings-conform.css' | url_asset }}" />
+        <link rel="stylesheet" href="{{ 'gui-2-0.css' | url_core }}" />
+        <link rel="stylesheet" href="{{ 'gui-responsive-2-0.css' | url_core }}" />
+        <script src="{{ 'jquery-1-9-1.js' | url_core }}"></script>
+        <script src="{{ 'jquery-ui-1-10-1.js' | url_core }}"></script>
+    	  <script type="text/javascript" src="{{ 'gui.js' | url_core }}"></script>
+    	  <script type="text/javascript" src="{{ 'gui-responsive-2-0.js' | url_core }}"></script>
+    	{% else %}
+        <link rel="stylesheet" type="text/css" href="{{ 'styles.min.css' | url_asset }}">
+        <link rel="stylesheet" type="text/css" href="{{ 'styles-checkout-min.css' | url_asset }}">
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+      	<script type="text/javascript" src="{{ 'gui.js' | url_core }}"></script>
+    	{% endif %}
+  	{% endif %}
+    {#<script type="text/javascript" src="{{ 'gui-responsive-2-0.js' | url_core }}"></script>#}
   </head>
 
   <body>
+  {% if '/account/password' in shop.canonical or '/account/login' in shop.canonical %}
     <div id="container" class="container" style="max-width: 840px;">
       <div class="row row-5-col nav-top">
         <div class="col-sm-5">
@@ -42,54 +55,37 @@
         </div>
       </div>
 		</div>
-    <script>
-      $('.gui-button-large.gui-button-action').html('Checkout');
-      $('.gui-cart-sum .gui-desc').html('Subtotal');
-      $('select').addClass('form-control');
-      $('.gui-action-delete').html('×');
-      $('th').html(function(i, html){
-        return html.replace('<span class="gui-nowrap">Item price</span>', '<span class="gui-nowrap">Price</span>');
-      });
-      $('th').html(function(i, html){
-        return html.replace('<span class="gui-nowrap">Quantity</span>', '<span class="gui-nowrap">Qty.</span>');
-      });
-      $('th').html(function(i, html){
-        return html.replace('<span class="gui-nowrap">Subtotal</span>', '<span class="gui-nowrap">Total</span>');
-      });
-      $('table tbody tr').each(function() {
-        var tr = $(this);
-        var qty = tr.find('td:eq(2)'); // indices are zero-based here
-        var price = tr.find('td:eq(4)');
-        var rm = tr.find('td:eq(3)');
-        var total = tr.find('td:eq(5)');
-        qty.detach().insertAfter(price);
-        rm.detach().insertAfter(total);
-      });
-      $('table thead tr').each(function() {
-        var tr = $(this);
-        var qty = tr.find('th:eq(1)'); // indices are zero-based here
-        var price = tr.find('th:eq(3)');
-        var space = tr.find('th:eq(2)');
-        var total = tr.find('th:eq(4)');
-        qty.detach().insertAfter(price);
-        space.detach().insertAfter(total);
-      });
-      $(document).ready(function() {
-        checkSize();
-        $(window).resize(checkSize);
-      });
-      function checkSize(){
-        if ($('.webstore-overlay-cart .gui-valign-top').css('display') == "none"){
-          $('tbody tr td:nth-child(2)').attr('colspan', '2');
-          $('#gui-form-shipment tbody tr td:last-child').attr('colspan', '1');
-        } else {
-          $('tbody tr td:nth-child(2)').attr('colspan', '0');
-        }
-      }
-      $('tbody tr:last-child td:nth-child(1)').attr('colspan', '5');
-      $('#gui-form-shipment td:last-child').html('<a href="javascript:;" onclick="$(\'#gui-form-shipment\').submit();" class="gui-button-inset" title="View">View</a>');
-      $('.gui-button-facebook').html('Login with Facebook');
-    </script>
+    <script type="text/javascript" src="{{ 'scripts-checkout-min.js' | url_asset }}"></script>
+  {% else %}
+    {% if '/account' in shop.canonical %}
+      <div class="wrapper">
+        <div class="container content">
+          <div class="row row-5-col nav-top">
+            <div class="col-sm-5">
+              <h1 style="margin-bottom:0.55em"><a style="color:black" href="{{ '' | url }}">{{ shop.name }}</a></h1>
+            </div>
+          </div>
+          {% include template %}
+        </div>
+      </div>
+    {% else %}
+      <div id="container" class="container" style="max-width: 840px;">
+        <div class="row row-5-col nav-top">
+          <div class="col-sm-5">
+            <h1 style="margin-bottom:0.55em"><a href="{{ '' | url }}">{{ shop.name }}</a></h1>
+          </div>
+        </div>
+        <div class="row row-5-col">
+          <div class="col-sm-5">
+            <div class="webstore-overlay-cart">
+    					{% include template %}
+    				</div>
+          </div>
+        </div>
+  		</div>
+      <script type="text/javascript" src="{{ 'scripts-checkout-min.js' | url_asset }}"></script>
+    {% endif %}
+  {% endif %}
   </body>
 
 </html>
