@@ -1,26 +1,44 @@
 {% include 'snippets/breadcrumbs.rain' %}
 
+{% set product_ids = [] %}
+
+{% for product in collection.products %}
+  {% set product_ids = product_ids|merge([product.id]) %}
+{% endfor %}
+
+<div id="store-product-ids" data-product-ids="{{ product_ids|json_encode() }}"></div>
+
 <div class="product-grid">
 <div class="row product-row flex-row">
 {% for product in collection.products %}
-<div class="product_cell col-sm-6" style="margin-bottom:36px;">
-  <div class="product_cell_graphic">
-    <a href="{{ product.url | url }}">
-      <img alt="{{ product.title }}" src="{{ product.image | url_image }}">
-    </a>
+  <div class="product_cell col-sm-6" style="margin-bottom:36px;">
+
+    <div class="product_cell_graphic">
+      <a href="{{ product.url | url }}">
+
+        {# product image carousel #}
+        <div class="product-grid-carousel" data-alt="{{ product.title }}">
+          <div class="product-carousel">
+            <div id="carousel-{{ product.id }}" class="carousel-inner" role="listbox" data-img-alt="{{ product.title }}">
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div>
+
+    <div class="product_cell_label">
+      <a href="{{ product.url | url }}">
+        {% if product.brand %}
+          {{ product.brand.title }}<br>
+        {% endif %}
+        {{ product.title }}
+      </a> —
+      <span class="product_cell_price_slash">
+        {% if product.price.price_old %}{{ product.price.price_old | money}}{% endif %}</span>
+      <span id="price-{{ product.id }}" class="product_cell_price"></span>
+    </div>
   </div>
-  <div class="product_cell_label">
-    <a href="{{ product.url | url }}">
-      {% if product.brand %}
-        {{ product.brand.title }}<br>
-      {% endif %}
-      {{ product.title }}
-    </a> —
-    <span class="product_cell_price_slash">
-      {% if product.price.price_old %}{{ product.price.price_old | money}}{% endif %}</span>
-    <span class="product_cell_price">{{ product.price.price | money }}</span>
-  </div>
-</div>
 {% endfor %}
 </div>
 </div>
@@ -52,3 +70,36 @@
 </div>
 
 {% endif %}
+
+<script>
+var productIds = $('#store-product-ids').data('product-ids');
+$.getJSON(`https://mmmanyfold-api.herokuapp.com/api/lightspeed-ecom/products/images?product-ids=[`+productIds+"]")
+  .then(function(json){
+          productIds.map(function(id){
+            var product = json.filter(function(e) {
+              return +Object.keys(e)[0] === id;
+            });
+            var images = product[0][id];
+            images.map(function(url){
+              var el = $('#carousel-'+id);
+              var altAttr = el.data('img-alt');
+              el.append('<div class="item"><img src="' + url + '" alt="' + altAttr + '"/></div>');
+            });
+          });
+        });
+$.getJSON(`https://mmmanyfold-api.herokuapp.com/api/lightspeed-ecom/products/price-range?product-ids=[`+productIds+"]")
+  .then(function(json){
+          productIds.map(function(id){
+            var product = json.filter(function(e) {
+              return +Object.keys(e)[0] === id;
+            });
+            var priceRange = product[0][id];
+            var el = $('#price-'+id);
+            if (priceRange.length == 1) {
+              el.append('$' + priceRange); }
+            else {
+              el.append('$' + priceRange[0] + ' - $' + priceRange[1]);
+            }
+          });
+        });
+</script>

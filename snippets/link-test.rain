@@ -1,41 +1,48 @@
 {# snippets/link-featuredartist.rain #}
 
-<!-- <div class="featured-artists"> -->
+<div class="featured-artists">
+
+<!-- <div class="text-center"><br>
+<h4>Next Featured Artist:</h4>
+<h2 class="page-title" style="margin:15px 0"><strong>
+William Wegman
+</strong></h2>
+<h4>Coming October 2017</h4>
+<br><hr>
+</div> -->
 
 <!-- ## 1. FEATURED ARTIST COLOR: #?????? (HEX CODE) -->
-<div style="color: #5aafaf" class="featured-artist active">
+<div style="color: #c78b67" class="featured-artist active">
 
 <h2 class="text-center page-title">
 
 <!-- ## 2. FEATURED ARTIST NAME -->
-  <strong>William Wegman</strong>
+  <strong>Ana Kraš & Natalie Weinberger</strong>
 
 <!-- ## 3. FEATURED ARTIST DATES -->
-  10 November 2017 - 15 January 2018
+  16 June – 20 August
 
 </h2>
 <div class="row">
   <div class="col-xs-12 col-sm-6 artist-icon">
 
 <!-- ## 4. FEATURED ARTIST POSTER -->
-    <img src="{{ 'wegman-proof.jpg' | url_asset }}">
+    <img src="{{ 'pr-posters-15-family.jpg' | url_asset }}">
 
   </div>
   <div class="col-xs-12 col-sm-6">
 
 <!-- ## 5. FEATURED ARTIST DESCRIPTION -->
-     <p>Opening   reception:   November   10,   6–8   pm.</p>
-    <p>Picture   Room   is   excited   to   announce   our   new   Feature   Artist,   William   Wegman.   The   exhibition,  Outdoor   Activities, presents   previously   unseen   lithographs   and   etchings,   as   well   as   watercolours   and   collages.   On   view   will   be   the   entirety   of Field   Guide   to   North   America   and   to   Other   Regions ,   a   collection   of   unique   photographs,   menus,   diagrams,   and   more charming memorabilia   from   Wegman’s   many   excursions   to   the   great   outdoors,   serving   as   a   real   manual   for   camping   trips.   A selection   of   plates   from    The   Lewis   &   Clark   Fishing   and   Cooking   Expedition ,   a   portfolio   of   etchings   made   by   Wegman, published   in   1994,   will   available   for   the   first   time   as   individual   artworks,   alongside   previously   unexhibited   etchings,    Family of   Trees ,    1993 ,   and    Fig.   158   (Wood   Pecker) ,    1989 .   The   centerpiece   of   the   show   is   a   watercolor   painting   titled    Activities    that captures   the   dynamic   energy   of   the   great   outdoors.</p>
- <p>In    Activities ,   we   see   figures   fishing,   camping,   and   hiking   through delicate   linear   brush   strokes   that   dance   across   the   entirety   of   the   picture   plane   with   the   effect   of   a   camouflage   pattern.   This image   will   also   be   reproduced   in   a   special   silk-screen   edition   published   by   Picture   Room   to   mark   the   exhibition.</p>
- <p>Widely   known   and   critically   acclaimed   for   his   photographs   and   videos,   particularly   of   his   pet   weimaraners,   Picture   Room provides   a   special   look   at   the   diversity   of   Wegman’s   life's   work.   Pulling   from   his   personal   archive,   the   exhibition   explores themes   of   nature   and   classic American   pastimes,   such   as   hiking,   camping,   and   fishing    —    all   of   which   appear   throughout different   points   in   Wegman’s   impressive   career.   Highlighting   never   before   seen   work   that   will transform   one’s understanding   and   appreciation   of   the   vastness   of   his   creativity,   Picture   Room encourages   and   invites   everyone   to   stop   by for   a   window   into   Wegman’s   world.</p>
+    <p>In a collaborative exhibition, Ana Kraš & Natalie Weinberger bring together drawing and sculpture to explore the nature of intimate family relationships, and the force of attraction between people and objects alike. Originating from Kras' ongoing body of line drawings, the pair collaborated to adapt Kras' abstract figures into 3-d forms, which were in turn thrown on the wheel by Weinberger. Each "family" is a modular set of functional ceramic vessels that stack to make a table top sculpture - abstracted figures who have a strong emotional pull to one another.</p>
+    <p>Beginning their collaboration with three sketches of three pairs, Kraš and Weinberger worked closely to translate the figures into 3D forms. All of the stoneware components were first thrown on the wheel, then cut and altered by Weinberger to match the silhouettes of the 2-d versions. Subsequently, Kraš concretized the families through their portraits, drawing the forms back into the two dimensional. Moulding an elegant sense of intimacy through the formal abstraction of togetherness, the 2D and 3D works find harmony in the two artists' subtle treatment of mass and line.</p>
   </div>
 </div>
 </div>
 <hr>
-<h2 class="text-center gutter-bottom" style="color: #5aafaf;">
+<h2 class="text-center gutter-bottom" style="color: #c78b67;">
 
 <!-- ## 6. FEATURED ARTIST WORKS TITLE -->
-  OUTDOOR ACTIVITIES — Works
+  FAMILY — Works
 
 </h2>
 <div id="featured-products">
@@ -43,15 +50,12 @@
 </div>
 </div>
 
-</h2>
-
 <div class="previous-artists">
 <h3>Previous Featured Artists</h3>
 <div style="display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap;">
 
 <!-- ## 7. ADD A PREVIOUS ARTIST DIRECTLY BELOW THIS COMMENT -->
 
-<div class="col-sm-6"><a style="color: #c78b67;" href="/search/family"> <img src="{{ 'pr-posters-15-family.jpg' | url_asset }}" alt="FAMILY" /> 2017.XV </a></div>
 <div class="col-sm-6"><a style="color: #ffad74;" href="/brands/aidan-koch"> <img src="{{ 'PR-Posters-14-Aidan_Koch.jpg' | url_asset }}" alt="Aidan Koch" /> 2017.XIV </a></div>
 <div class="col-sm-6"><a style="color: #00838b;" href="/brands/joana-avillez"> <img src="{{ 'PR-Posters-13-Joana_Avillez.jpg' | url_asset }}" alt="Joana Avillez" /> 2016.XIII </a></div>
 <div class="col-sm-6"><a style="color: #2d2926;" href="/brands/maia-ruth-lee"> <img src="{{ 'PR-Posters-12-Maia_Ruth_Lee.jpg' | url_asset }}" alt="Maia Ruth Lee" /> 2016.XII </a></div>

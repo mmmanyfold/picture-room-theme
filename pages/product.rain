@@ -13,7 +13,7 @@
    		</div>
     </div>
     <div class="col-sm-6">
-			<div id="Product_description_long" class="description">
+			<div id="Product_description_long" class="description" style="white-space: pre-line;">
 				{{ product.content | raw }}
 			</div>
 			<div class="row gutter-top">

@@ -7,6 +7,8 @@
   {% include 'snippets/link-staffpicks.rain' %}
 {% elseif textpage.title == "Event Calendar" %}
   {% include 'snippets/link-eventcalendar.rain' %}
+{% elseif textpage.title == "TEST" %}
+  {% include 'snippets/link-test.rain' %}
 {% else %}
   {% include 'snippets/link-information.rain' %}
 {% endif %}

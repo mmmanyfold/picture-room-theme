@@ -1,0 +1,254 @@
+@font-face{font-family:Circular;src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.eot);src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.eot?#iefix) format("embedded-opentype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.woff) format("woff"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.ttf) format("truetype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.svg#dd452d63ae05ddb466f19713a7d09fd5) format("svg");font-style:normal;font-weight:400}@font-face{font-family:Circular;src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.eot);src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.eot?#iefix) format("embedded-opentype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.woff) format("woff"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.ttf) format("truetype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.svg#dd452d63ae05ddb466f19713a7d09fd5) format("svg");font-style:normal;font-weight:700}@font-face{font-family:Circular;src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.eot);src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.eot?#iefix) format("embedded-opentype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.woff) format("woff"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.ttf) format("truetype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.svg#dd452d63ae05ddb466f19713a7d09fd5) format("svg");font-style:italic;font-weight:400}@font-face{font-family:Circular;src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.eot);src:url(https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.eot?#iefix) format("embedded-opentype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.woff) format("woff"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.ttf) format("truetype"),url(https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.svg#dd452d63ae05ddb466f19713a7d09fd5) format("svg");font-style:italic;font-weight:700}
+
+/* General
+================================================== */
+body {
+  font-family: Circular, Helvetica, sans-serif;
+  background: {{ theme.background_color }} url('background_image.png') {{ theme.background_repeat }} {{ theme.background_position }};
+}
+h1, h2, h3, h4, h5, h6, .gui-page-title {
+  font-family: Circular, Helvetica, sans-serif;
+}
+
+/* Colors
+================================================== */
+/* Highlight color */
+a,
+a:visited,
+a:hover,
+a:focus,
+nav.desktop .item.active .itemLink,
+nav .glyphicon-remove,
+.sidebar .item .itemLink.active,
+.sidebar .item .itemLink.active:hover,
+.sidebar .item .subitemLink.active,
+.sidebar .item .subitemLink.active:hover,
+footer .social-media .symbol:hover,
+.products .product .image-wrap .cart,
+.sidebar .item .active,
+.sidebar .item .active:hover,
+.slider-prev:hover span, .slider-next:hover span {
+  color: {{ theme.highlight_color }};
+}
+
+/* Highlight border-color */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+.products .product .image-wrap .cart,
+.slider-pagination a {
+  border-color: {{ theme.highlight_color }};
+}
+
+/* Highlight background-color */
+a.btn,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.navigation .burger.open li,
+.slider-pagination a.active {
+  background-color: {{ theme.highlight_color }};
+}
+
+/* Button color */
+a.btn,
+a.btn span {
+  color: {{ theme.button_color }};
+}
+
+/* Body background-color
+================================================== */
+body,
+.slider-pagination a {
+  background-color:{{ theme.background_color }};
+}
+/* Ligtgrey background-color */
+.products .product .info,
+#collection-filter-price .ui-slider-handle {
+  background-color: {{ theme.background_color | color_mix('#FFFFFF', 0.07) }};
+}
+.slider img,
+.products .product .image-wrap img,
+.categories .category img,
+.zoombox .images a img, .zoombox .thumbs a img {
+  background-color: {{ theme.background_color | color_mix('#000000', 0.03) }};
+}
+
+/* Lightborder */
+.sort,
+.sidebar .item,
+.pager ul li a,
+.product-info .product-option,
+.product-info .product-price,
+.product-tabs,
+.tabs ul li a,
+.product-actions,
+hr,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select,
+.headline .slider,
+.brands .slider li,
+.hallmarks .slider li,
+.categories .category,
+.products .product .image-wrap img,
+.products .product .info,
+#collection-filter-price,
+#collection-filter-price .ui-slider-range,
+#collection-filter-price .ui-slider-handle,
+.pager ul,
+.zoombox .images,
+.zoombox .thumbs a,
+.product-info .product-price .cart .change,
+.tabsPages .page.reviews .review {
+  border-color: {{ theme.background_color | color_mix('#000000', 0.08) }};
+}
+
+/* Body color
+================================================== */
+/* general color */
+body,
+.products .product .info .title,
+.product-info .product-price .cart .change a {
+  color: {{ theme.color }};
+}
+
+/* lighter color */
+small,
+.breadcrumbs, .breadcrumbs a,
+.products .product .info .old-price,
+.sidebar,
+.sidebar .item .itemLink,
+.sidebar .item .subitemLink,
+.pager,
+.pager ul li a,
+.product-info .product-price .old-price,
+.product-actions .tags-actions,
+.product-actions .tags-actions .actions a,
+.tabs ul li a,
+label,
+legend,
+label span,
+.tabsPages .page.reviews .bottom,
+.product-actions .tags-actions {
+  color: {{ theme.color | color_mix('#ffffff', 0.08) }};
+}
+
+/* darker color */
+.breadcrumbs a:hover,
+.sidebar .item .itemLink:hover, .sidebar .item .subitemLink:hover,
+.pager ul li a:hover,
+.product-actions .tags-actions .actions a:hover,
+.product-info .product-price .cart .change a:hover {
+  color: {{ theme.color | color_mix('#000000', 0.08) }};
+}
+
+/* Element color
+================================================== */
+/* header */
+header,
+header a,
+nav.desktop ul a, nav.desktop ul a:visited,
+nav.desktop .item .itemLink,
+nav.desktop .subnav .subitem .subitemLink:hover {
+  color: {{ theme.header_color }};
+}
+.navigation .burger li {
+  background-color: {{ theme.header_color }};
+}
+header,
+.navigation {
+    background-color: {{ theme.header }};
+}
+header,
+header input[type="text"],
+nav.desktop .subnav .subitem,
+nav.desktop .item.hover .itemLink,
+nav.desktop .subnav {
+  border-color: {{ theme.header | color_mix('#000000', 0.08) }};
+}
+/* blog header fix 02/03/17 */
+.gui-blog-article header { background: none; }
+
+nav.desktop .item.sub.hover .itemLink,
+nav.desktop .item.hover .itemLink,
+nav.desktop .subnav .subitem {
+  background-color: {{ theme.header | color_mix('#FFFFFF', 0.07) }};
+}
+nav.desktop .subnav .subitem .subitemLink:hover {
+  background-color: {{ theme.header | color_mix('#000000', 0.03) }};
+}
+
+/* Topbar */
+.topnav {
+  background-color: {{ theme.topbar }};
+}
+.topnav,
+.topnav a {
+  color: {{ theme.topbar_color }};
+}
+.topnav {
+  border-color: {{ theme.topbar | color_mix('#000000', 0.07)}};
+}
+
+/* footer */
+footer,
+.slider-prev,
+.slider-next,
+.categories .category span,
+.products .product .image-wrap .new {
+  background-color: {{ theme.footer }};
+}
+.categories .category span.title {
+  box-shadow: -4px 0 0 0 {{ theme.footer }}, 4px 0 0 0 {{ theme.footer }};
+}
+.categories .category span,
+nav .glyphicon-play,
+.products .product .image-wrap .description,
+footer,
+footer a,
+footer .links a,
+.slider-prev span,
+.slider-next span,
+.copyright-payment .copyright,
+.copyright-payment .copyright a,
+.products .product .image-wrap .new {
+  color:{{ theme.footer_color }};
+}
+
+/* copyright */
+.copyright-payment {
+  background-color: {{ theme.footer | color_mix('#000000', 0.07)}};
+}
+
+/* element color */
+.product-info .product-price .cart .change,
+#collection-filter-price .ui-slider-range,
+.pager ul li.active a {
+  background-color: {{ theme.element_color }};
+}
+
+@media (max-width: 767px) {
+  nav .item .itemLink,
+  nav .subitem .subitemLink,
+  #formSearch,
+  header input[type="text"] {
+    color:{{ theme.footer_color }};
+    border-color: {{ theme.footer | color_mix('#000000', 0.08) }};
+  }
+  nav,
+  nav .item.view-subnav {
+    background-color: {{ theme.footer }};
+  }
+  .wrapper {
+    background-color:{{ theme.background_color }};
+  }
+  .navigation .logo, .navigation .burger {
+    background-color: {{ theme.header }};
+    border-color: {{ theme.header | color_mix('#000000', 0.08) }};
+  }
+}

@@ -3,24 +3,40 @@
 <div id="custom_content" class="span12">
 <div class="carousel slide home-carousel gutter-bottom" id="featured-artist-carousel" data-ride="carousel" data-interval="5000">
 	<div class="carousel-inner">
-		<div class="item active">
-      <!-- ## SLIDE 1: LINKS TO... -->
-      <a href="/service/information">
-      <!-- ## SLIDE 1: SMALL TEXT -->
-			<h3 class="hidden-xs">Hello World!</h3>
-      <!-- ## SLIDE 1: IMAGE -->
-			<img src="{{ 'PR-Homepage-1-Welcome.jpg' | url_asset}}">
-      <!-- ## SLIDE 1: LARGE TEXT -->
-			<h2>Welcome to<br>
-          Picture Room Online
-			</h2>
+
+    <div class="item active">
+      <!-- ## SLIDE 0: LINK TO... -->
+			<a style="color:white" href="/service/featured-artist/">
+      <!-- ## SLIDE 0: SMALL TEXT -->
+			<h3 class="hidden-xs">Featured Artist</h3>
+      <!-- ## SLIDE 0: IMAGE -->
+			<img src="{{ 'wegman-web-slideshow.jpg' | url_asset }}">
+      <!-- ## SLIDE 0: LARGE TEXT -->
+			<h2>William Wegman<br>
+          November 10 — January 15
+        	</h2>
 			</a>
 		</div>
-		<div class="item">
-      <!-- ## SLIDE 2: LINKS TO... -->
+
+    <div class="item">
+      <!-- ## SLIDE 1: LINK TO... -->
+			<a style="color:white" href="/sanya-kantarovsky-little-vera-2014-framed.html">
+      <!-- ## SLIDE 1: SMALL TEXT -->
+			<h3 class="hidden-xs">Featured Artwork</h3>
+      <!-- ## SLIDE 1: IMAGE -->
+			<img src="{{ 'vera.jpg' | url_asset }}">
+      <!-- ## SLIDE 1: LARGE TEXT -->
+			<h2>Sanya Kantarovsky<br>
+          Little Vera
+        	</h2>
+			</a>
+		</div>
+
+    <div class="item">
+      <!-- ## SLIDE 2: LINK TO... -->
 			<a href="/service/featured-artist/">
       <!-- ## SLIDE 2: SMALL TEXT -->
-			<h3 class="hidden-xs">Featured Artists</h3>
+			<h3 class="hidden-xs">Past Exhibitions</h3>
       <!-- ## SLIDE 2: IMAGE -->
 			<img src="{{ 'PR-Homepage-2-Sigrid.jpg' | url_asset }}">
       <!-- ## SLIDE 2: LARGE TEXT -->
@@ -29,35 +45,39 @@
 			</h2>
 			</a>
 		</div>
-		<div class="item">
-      <!-- ## SLIDE 3: LINKS TO... -->
-			<a href="/study-of-6-elements-1960-1970s-framed/dp/1198">
+
+    <div class="item">
+      <!-- ## SLIDE 3: LINK TO... -->
+			<a style="color:white" href="/service/information">
       <!-- ## SLIDE 3: SMALL TEXT -->
-			<h3 class="hidden-xs">Featured Artwork</h3>
-      <!-- ## SLIDE 3: IMAGE -->
-			<img src="{{ 'PR-Homepage-3-Pezzo.jpg' | url_asset }}">
-      <!-- ## SLIDE 3: LARGE TEXT -->
-			<h2>Lucio Del Pezzo<br>
-          Study of 6 Elements, 1960 - 1970s
-			</h2>
-			</a>
-		</div>
-		<div class="item">
-      <!-- ## SLIDE 4: LINKS TO... -->
-			<a href="/service/information">
-      <!-- ## SLIDE 4: SMALL TEXT -->
 			<h3 class="hidden-xs">Visit Us</h3>
-      <!-- ## SLIDE 4: IMAGE -->
-			<img src="{{ 'PR-Homepage-4-Shop.jpg' | url_asset }}">
-      <!-- ## SLIDE 4: LARGE TEXT -->
+      <!-- ## SLIDE 3: IMAGE -->
+			<img src="{{ 'shopautumn.jpg' | url_asset }}">
+      <!-- ## SLIDE 3: LARGE TEXT -->
 			<h2>Picture Room<br>
-          236 Mulberry St., NYC
+          117 Atlantic Ave.<br>
+          Brooklyn
 			</h2>
 			</a>
 		</div>
-	</div>
+
+    <div class="item">
+      <!-- ## SLIDE 4: LINK TO... -->
+			<a href="/repro-rights-zine-repro-rights-zine-2017-unframed.html">
+      <!-- ## SLIDE 4: SMALL TEXT -->
+			<h3 class="hidden-xs">RESIST</h3>
+      <!-- ## SLIDE 4: IMAGE -->
+			<img src="{{ '/repro.jpg' | url_asset }}">
+      <!-- ## SLIDE 4: LARGE TEXT -->
+			<h2>Repro Rights Zines,<br>
+          by Petra Collins, Meriam Bennani, Alia Penner and More
+			</h2>
+			</a>
+		</div>
+
+  </div>
 	<div class="slide-count hidden-xs">
-		<span class="current">1</span> / 4
+		<span class="current">1</span> / 5
 	</div>
 	<p>
 		<a class="left carousel-control" href="#featured-artist-carousel" data-slide="prev">

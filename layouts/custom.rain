@@ -13,7 +13,6 @@
   	<meta property="og:description" content="{{ shop.description }}"/>
   	<meta property="og:image" content="{{ 'PR-Homepage-1-Welcome.jpg' | url_asset }}"/>
   	<meta property="og:url" content="{{ shop.canonical }}"/>
-  	<meta name="p:domain_verify" content="7db2449c1034085a062d03f667333e09"/>
 
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="shortcut icon" href="{{ 'favicon.png' | url_asset }}" />
@@ -21,9 +20,9 @@
   	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ 'styles.min.css' | url_asset }}">
 
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/momentjs/2.10.6/moment-with-locales.min.js"></script>
-  	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   </head>
 
   <body>
@@ -44,7 +43,8 @@
 			<!-- footer -->
 			{% include 'snippets/footer.rain' %}
 		</div>
-    <script type="text/javascript" src="{{ 'scripts.min.js' | url_asset }}"></script>
+    <script type="text/javascript" src="{{ 'scripts-min.js' | url_asset }}"></script>
+    <script type="text/javascript" src="{{ 'site.js' | url_asset }}"></script>
   </body>
 
 </html>

@@ -1,6 +1,6 @@
 {# snippets/link-information.rain #}
 
-<h2 class="text-center page-title hidden-xs"><strong>Picture Room</strong><br /> McNally Jackson Store</h2>
+<h2 class="text-center page-title hidden-xs"><strong>Picture Room</strong></h2>
 <div class="font-size-lg">
 <p>At Picture Room, we sell work by emerging and established contemporary artists as well as rare prints, posters, artists’ books, and art publications. We scour private collections, galleries, and institutions, and work with individual artists to discover and showcase works that might not otherwise find their way into a traditional retail environment. It's our mission to provide access to a diverse, researched, relevant collection in an open and informed environment. We work with interior designers, art advisors and identity consultants to make their experience buying artwork for specific projects fluid and simple.</p>
 <div class="row">
@@ -11,14 +11,21 @@
 <hr />
 <div class="row">
 <div class="col-sm-6 hours-info"><strong>Picture Room</strong><br />117 Atlantic Ave. <br /> Brooklyn, NY — 11201 <br /> <br /> <strong>Hours</strong><br />
-  M: Closed<br>
-  T: 1 PM - 6 PM<br>
-  W: 1 PM - 6 PM<br>
-  Th: 1 PM - 7 PM<br>
-  F: 11 AM - 8 PM<br>
-  S: 11 AM - 8 PM<br>
-  S: 11 AM - 5 PM
-  <br /> <br /> <strong>T</strong> +1 (718) 935 1870<br /> <strong>E</strong> <a href="mailto:info@pictureroom.shop">info@pictureroom.shop</a></div>
+      <table>
+        <tr>
+          <td><strong>T,W,Th  </strong></td>
+          <td>1 PM – 7 PM</td>
+        </tr>
+        <tr>
+          <td><strong>F,S  </strong></td>
+          <td>11 AM – 7 PM</td>
+           </tr>
+        <tr>
+          <td><strong>Su  </strong></td>
+          <td>11 AM – 5 PM</td>
+        </tr>
+      </table>
+  <br /> <br /> <strong>T</strong> +1 (347) 987 4675<br /> <strong>E</strong> <a href="mailto:info@pictureroom.shop">info@pictureroom.shop</a></div>
 <div class="col-sm-6"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.227164294386!2d-73.99849778457352!3d40.69099437933417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f4e849709%3A0x8fa60312f0953021!2sPicture+Room!5e0!3m2!1sen!2sus!4v1490411353034" width="100%" height="383" frameborder="0" allowfullscreen="allowfullscreen">
     </iframe></div>
 </div>
@@ -31,11 +38,11 @@
 <p><strong>What is your privacy policy?</strong></p>
 <p>We never share your information with anyone.</p>
 <p><strong>What is your return policy?</strong></p>
-<p>Due to the rare and delicate nature of our artworks, we are unable to accept returns on fine art prints, editions, posters or unique artworks. We do accept book returns. To arrange a return please contact <a href="mailto:info@mcnallyjacksonstore.com">info@mcnallyjacksonstore.com</a> or give us a call during store hours: 212 219 2789.</p>
+<p>Due to the rare and delicate nature of our artworks, we are unable to accept returns on fine art prints, editions, posters or unique artworks. We do accept book returns. To arrange a return please contact <a href="mailto:info@pictureroom.shop">info@pictureroom.shop</a> or give us a call during store hours: 347 987 4675.</p>
 </div>
 <div class="col-md-6">
 <p><strong>Where do you source artworks?</strong></p>
-<p>We acquire artworks from many sources, mostly from the artists themselves, or from collectors and institutions. If you have any specific questions about the provenance of an artwork on our website, please feel free to contact us by email at <a href="mailto:info@mcnallyjacksonstore.com">info@mcnallyjacksonstore.com</a>, or give us a call during store hours: 212 219 2789.</p>
+<p>We acquire artworks from many sources, mostly from the artists themselves, or from collectors and institutions. If you have any specific questions about the provenance of an artwork on our website, please feel free to contact us by email at <a href="mailto:info@pictureroom.shop">info@pictureroom.shop</a>, or give us a call during store hours: 347 987 4675.</p>
 <p><strong>Do you gift wrap?</strong></p>
 <p>We do! For online orders, just include a note to us in the special notes section upon check out. Please tell us what you would like your hand-written note to say to its recipient, and indicate whether you would prefer us not to include the invoice in the package.</p>
 </div>

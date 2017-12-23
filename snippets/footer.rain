@@ -8,17 +8,25 @@
      </div>
      <div class="col-xs-2 col-sm-1">
        <strong>Hours</strong><br>
-       M: Closed<br>
-       T: 1 PM - 6 PM<br>
-       W: 1 PM - 6 PM<br>
-       Th: 1 PM - 7 PM<br>
-       F: 11 AM - 8 PM<br>
-       S: 11 AM - 8 PM<br>
-       S: 11 AM - 5 PM
+        <table>
+          <tr>
+            <td><strong>T,W,Th  </strong></td>
+            <td>1 PM – 7 PM</td>
+          </tr>
+          <tr>
+            <td><strong>F,S</strong></td>
+            <td>11 AM – 7 PM</td>
+             </tr>
+          <tr>
+            <td><strong>Su</strong></td>
+            <td>11 AM – 5 PM</td>
+          </tr>
+        </table>
      </div>
      <div class="col-xs-3 col-sm-1 phone-col">
-       <strong class="fixed-width-label">T</strong>718 935 1870<br>
-       <strong class="fixed-width-label">E</strong><a href="mailto:info@pictureroom.shop">info@</a>
+       <strong class="fixed-width-label">T</strong>347 987 4675<br>
+       <strong class="fixed-width-label">E</strong>
+          <a style="text-decoration:underline" href="mailto:info@pictureroom.shop">info@</a>
      </div>
      <div class="col-xs-2 col-sm-1 social-col">
        <strong class="fixed-width-label">I</strong><a href="https://instagram.com/pictureroomnyc/" target="_blank">Instagram</a><br>
