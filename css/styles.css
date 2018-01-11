@@ -11,33 +11,33 @@
 
 @font-face {
   font-family: 'Circular';
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.eot");
+  src: url("../fonts/CircularStd-Book-PR-2.eot");
   /* IE9 Compat Modes */
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.eot?#iefix") format("embedded-opentype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.woff") format("woff"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.ttf") format("truetype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Book-PR-2.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
+  src: url("../fonts/CircularStd-Book-PR-2.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Book-PR-2.woff") format("woff"), url("../fonts/CircularStd-Book-PR-2.ttf") format("truetype"), url("../fonts/CircularStd-Book-PR-2.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400; }
 @font-face {
   font-family: 'Circular';
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.eot");
+  src: url("../fonts/CircularStd-Medium-PR-1.eot");
   /* IE9 Compat Modes */
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.eot?#iefix") format("embedded-opentype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.woff") format("woff"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.ttf") format("truetype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-Medium-PR-1.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
+  src: url("../fonts/CircularStd-Medium-PR-1.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Medium-PR-1.woff") format("woff"), url("../fonts/CircularStd-Medium-PR-1.ttf") format("truetype"), url("../fonts/CircularStd-Medium-PR-1.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 700; }
 @font-face {
   font-family: 'Circular';
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.eot");
+  src: url("../fonts/CircularStd-BookItalic.eot");
   /* IE9 Compat Modes */
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.woff") format("woff"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.ttf") format("truetype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-BookItalic.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
+  src: url("../fonts/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BookItalic.woff") format("woff"), url("../fonts/CircularStd-BookItalic.ttf") format("truetype"), url("../fonts/CircularStd-BookItalic.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
   /* Legacy iOS */
   font-style: italic;
   font-weight: 400; }
 @font-face {
   font-family: 'Circular';
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.eot");
+  src: url("../fonts/CircularStd-MediumItalic.eot");
   /* IE9 Compat Modes */
-  src: url("https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.eot?#iefix") format("embedded-opentype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.woff") format("woff"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.ttf") format("truetype"), url("https://eemshi.github.io/picture-room-assets/font/CircularStd-MediumItalic.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
+  src: url("../fonts/CircularStd-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-MediumItalic.woff") format("woff"), url("../fonts/CircularStd-MediumItalic.ttf") format("truetype"), url("../fonts/CircularStd-MediumItalic.svg#dd452d63ae05ddb466f19713a7d09fd5") format("svg");
   /* Legacy iOS */
   font-style: italic;
   font-weight: 700; }
@@ -430,22 +430,22 @@ select.form-control {
   text-indent: -9999px;
   width: 12px;
   height: 12px;
-  background: url(https://eemshi.github.io/picture-room-assets/PR-Star-Empty.png);
+  background: url(../images/PR-Star-Empty.png);
   background-size: contain;
   line-height: 12px; }
   .link-mcnally-jackson:hover {
-    background-image: url(https://eemshi.github.io/picture-room-assets/PR-Star-Full.png); }
+    background-image: url(../images/PR-Star-Full.png); }
 
 .link-gfts {
   display: inline-block;
   text-indent: -9999px;
   width: 12px;
   height: 12px;
-  background: url(https://eemshi.github.io/picture-room-assets/PR-Circle-Empty.png);
+  background: url(../images/PR-Circle-Empty.png);
   background-size: contain;
   line-height: 12px; }
   .link-gfts:hover {
-    background-image: url(https://eemshi.github.io/picture-room-assets/PR-Circle-Full.png); }
+    background-image: url(../images/PR-Circle-Full.png); }
 
 /* Side Nav */
 .side-nav {
@@ -492,7 +492,8 @@ select.form-control {
 .product-grid {
   margin-top: 36px; }
   .product-grid .product-row {
-    margin-top: 36px; }
+    margin-bottom: 36px; }
+
 .product_cell img {
   max-width: 100%; }
 .product_cell .product_cell_graphic {
@@ -1132,22 +1133,5 @@ body.overlay, .editcartmodal.webstore-modal.show {
 
   .webstore-overlay section > header h1 img + span {
     font-size: 28px; } }
-
-#custom_content {
-  padding-bottom:40px
-}
-.flex-row {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap
-}
-.product-configure-options-option label {
-  display:none
-}
-.product-detail {
-  padding-bottom:30px;
-}
-a.staff-member{ cursor:pointer }
 
 /*# sourceMappingURL=styles.css.map */

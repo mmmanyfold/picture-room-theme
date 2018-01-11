@@ -22,11 +22,10 @@ module.exports = function(grunt) {
     uglify: {
       scripts: {
         files: {
-          "dist/scripts.min.js": [
+          "dist/scripts-min.js": [
             "js/jquery.min.js", "js/bootstrap.js",
-            "js/mustache.js", "js/date.format.js",
-            "js/linkify.min.js", "js/linkify-jquery.min.js",
-            "js/scripts.js"]
+            "js/mustache.js", "js/linkify.min.js",
+            "js/linkify-jquery.min.js"]
         }
       }
     }

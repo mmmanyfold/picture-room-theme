@@ -1,63 +1,6 @@
 $(document).ready(function() {
-
-    "use strict";
-
-    $(".link-gfts").mouseover(function(){$("span#site-name").text("Goods for the Study")});
-    $(".link-gfts").mouseout(function(){$("span#site-name").text("Picture Room")});
-    $(".link-mcnally-jackson").mouseover(function(){$("span#site-name").text("McNally Jackson")});
-    $(".link-mcnally-jackson").mouseout(function(){$("span#site-name").text("Picture Room")});
-
-    // if we are in grid.php view
-    if($('.product-grid').length === 1) {
-        var grid = {};
-        var productVariations = $('.photoVariation');
-
-        // enumerate the list of variation product cell ids
-        // can't simply map over it because jquery modifies the return value of .map
-        // presumably for chaining
-        var enum_grid = Array.apply(this, productVariations.map(function(i, product){
-            return $(product).data('image-variation-pc-id');
-        }));
-
-        // initialize grid map
-        R.uniq(enum_grid)
-            .forEach(function (v) {
-              grid[v] = [];
-            });
-
-        // populate grid map
-        productVariations.each(function(i, product){
-            var pc_id = $(product).data('image-variation-pc-id');
-            var alt = $('.product-grid-carousel').eq(i).data('alt');
-            grid[pc_id].push('<img alt="' + alt + '" src="'  + $(product).data('image') + '"/>');
-        });
-
-        // now we can use grid map to render individual images onto
-        // the page
-        var template_start = '<div class="carousel">' +
-          '<div class="carousel-inner" role="listbox">';
-        var template_end =  '</div></div>';
-
-        var middlebits = function(index){
-          return grid[index].map(function(img, i){
-            var item = "";
-            if(i === 0) {
-              item = '<div class="item active">' + img + '</div>';
-            } else {
-              item =  '<div class="item">' + img + '</div>';
-            }
-            return item;
-          });
-        };
-
-        $('.product-grid-carousel').map(function (index) {
-           //render grid data onto page
-          $(this).html(template_start +  middlebits(index).join('') + template_end);
-        });
-        // start the carousels
-        $('.carousel').carousel({ interval: 1000});
-    }
-  });
+  $('.product-carousel').carousel({ interval: 1000});
+});
 
 function bindZoom() {
   $(".pr-photos").prPhotos();
@@ -202,7 +145,7 @@ function bindZoom() {
               "{{#location}}        {{street}}<br/>" +
               "{{city}}, {{state}}<br/>" +
               "{{zip}}        {{/location}}        {{/place}} </div>" +
-            "<div class='col-xs-6 col-sm-3 join-link'><a class='btn btn-primary' href='{{ link }}'>Join Event</a></div></div></div></script>")
+            "<div class='col-xs-6 col-sm-3 join-link'><img width='100%' src='{{ img }}'/><br><a class='btn btn-primary' href='{{ link }}'>Join Event</a></div></div></div></script>")
     },
 
     renderEvents: function(events) {
@@ -216,33 +159,48 @@ function bindZoom() {
         }
         return sorter;
       });
-
-      var self = this, now = new Date(), template = $("#event-template").html();
-      r_events.forEach(function(event) {
+      var self = this, now = moment().unix(), template = $("#event-template").html();;
+      var upcomingEvents = r_events.every(function(event){
         var end = event.end_time;
         var start = event.start_time;
         var endDateTime = String(end).split('T');
         var startDateTime = String(start).split('T');
         var endDate = endDateTime[0];
         var startDate = startDateTime[0];
-        if ((new Date(end)) >= now) {
-          var data = {
-            name: event.name,
-            description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
-            link: "https://www.facebook.com/events/" + event.id + "/",
-            place: event.place
-          };
-          if (startDate === endDate) {
-            data['start'] = dateFormat(new Date(event.start_time), "dddd mmmm dS, h:MM TT");
-            data['end'] = dateFormat(new Date(event.end_time), "h:MM TT");
-          } else {
-            data['start'] = dateFormat(new Date(event.start_time), "mmmm dS, h:MM TT");
-            data['end'] = dateFormat(new Date(event.end_time), "mmmm dS, h:MM TT");
-          }
-          var $event = $(Mustache.render(template, data));
-          self.$el.append($event);
-        }
+        var endUnix = moment(end).unix();
+        return endUnix >= now;
       });
+
+      if (!upcomingEvents) {
+        self.$el.append("<br><h4>No upcoming events at this time.<br><br><a href='https://www.facebook.com/pg/pictureroomnyc/events/' target='_blank'>View past events →</a></h4>");
+      } else {
+        r_events.forEach(function(event) {
+          var end = event.end_time;
+          var start = event.start_time;
+          var endDateTime = String(end).split('T');
+          var startDateTime = String(start).split('T');
+          var endDate = endDateTime[0];
+          var startDate = startDateTime[0];
+          var endUnix = moment(end).unix();
+          if (endUnix >= now) {
+            var data = {
+              name: event.name,
+              description: event.description.replace(/(?:\r\n|\r|\n)/g, '<br />'),
+              link: "https://www.facebook.com/events/" + event.id + "/",
+              place: event.place,
+              img: event.picture_url
+            };
+            if (startDate === endDate) {
+              data['start'] = moment(event.start_time).format("dddd MMMM D, h:mma");
+              data['end'] = moment(event.end_time).format("h:mma");
+            } else {
+              data['start'] = moment(event.start_time).format("MMMM D, h:mma");
+              data['end'] = moment(event.end_time).format("MMMM D, h:mma");
+            }
+            var $event = $(Mustache.render(template, data));
+            self.$el.append($event);
+          }
+        });}
       $(".description", this.$el).linkify();
     }
   };
@@ -262,8 +220,6 @@ function bindZoom() {
   };
   $.fn.prEvents.defaults = {};
   $(".pr-events").prEvents();
-
-
 
   $(".carousel").carousel({
     interval: 5000
